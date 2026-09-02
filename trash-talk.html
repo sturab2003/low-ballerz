@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trash Talk Board | Low Ballerz</title>
+<meta name="description" content="Stat-backed trash talk and a live comment board for the Low Ballerz fantasy football league.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">LB</span>
+      <span class="brand-text">LOW BALLERZ<small>Fantasy Football League &middot; Est. 2008</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav class="site-nav" id="siteNav">
+      <a class="nav-link" href="index.html">Home</a><a class="nav-link" href="standings.html">Standings</a><a class="nav-link" href="scores.html">Weekly Scores</a><a class="nav-link" href="power-rankings.html">Power Rankings</a><a class="nav-link" href="history.html">History & Records</a><a class="nav-link" href="managers.html">Managers</a><a class="nav-link" href="records.html">All-Time Records</a><a class="nav-link" href="rivalries.html">Rivalries</a><a class="nav-link" href="draft-central.html">Draft Central</a><a class="nav-link" href="draft.html">Draft Recap</a><a class="nav-link" href="keepers.html">Keepers</a><a class="nav-link" href="trades.html">Trade Newsletter</a><a class="nav-link" href="trade-analyzer.html">Trade Analyzer</a><a class="nav-link active" href="trash-talk.html">Trash Talk</a><a class="nav-link" href="futures.html">Futures & Ballot</a><a class="nav-link" href="rules.html">Rules</a><a class="nav-link" href="recap.html">Newsletter</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <p class="eyebrow">The Receipts</p>
+  <h1>Trash Talk Board</h1>
+  <p class="hero-sub">Stat-backed disrespect from the 2025 season, plus a live board below where anyone in the league can drop their own take in real time.</p>
+</section>
+<section class="section">
+  <h2 class="section-title">The Official Burns</h2>
+  <div class="talk-grid">
+    <div class="talk-card">
+      <h3>THE NUMBERS DON'T LIE</h3>
+      <p>Champ Scypher went 14-0 in the regular season, best record in franchise history &mdash; and still didn't win the title. 3rd place. Choke of the century, or just a really deep league?</p>
+    </div>
+    <div class="talk-card">
+      <h3>RAZOR THIN</h3>
+      <p>Mamba Mentality won the 2025 championship by exactly 0.48 points over Christian My Calf Hurt. A single lucky stat correction either way and this whole banner gets an asterisk.</p>
+    </div>
+    <div class="talk-card">
+      <h3>THE BASEMENT</h3>
+      <p>This hill I die on finished dead last in points scored (2026.46) AND allowed the most points against (2480.28). Historically bad on both sides of the ball.</p>
+    </div>
+    <div class="talk-card">
+      <h3>ICE COLD</h3>
+      <p>Chig-Chig Boom posted a 74.98 in Week 11 &mdash; the single lowest score by any team all season. That's not a lineup, that's a cry for help.</p>
+    </div>
+    <div class="talk-card">
+      <h3>SPENT IT ALL AND GOT NOTHING</h3>
+      <p>Ali Khalid LLC made the fewest roster moves in the league (11) and sat on $70 of unused FAAB all year &mdash; and still finished 11th. Sometimes doing nothing doesn't pay off either.</p>
+    </div>
+    <div class="talk-card">
+      <h3>PAPER CHAMPS</h3>
+      <p>Champ Scypher dropped 246.08 in Week 12, one of the biggest weeks of the season &mdash; and still lost in the semifinals a few weeks later. Regular season stats don't play in the playoffs.</p>
+    </div>
+    <div class="talk-card">
+      <h3>OPENING DAY DISRESPECT</h3>
+      <p>You're Ma Nanga Guy beat the eventual champion, Mamba Mentality, in Week 1. Mamba then won the title anyway. Statement win, zero impact.</p>
+    </div>
+    <div class="talk-card">
+      <h3>FREE WEEK</h3>
+      <p>In Week 9, Ali Khalid LLC and Chig-Chig Boom combined for the lowest-scoring matchup of the season (85.92 to 86.56). Somebody had to win. Nobody deserved to.</p>
+    </div></div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Live Board</h2>
+  <p class="section-note">Post something and it shows up for everyone instantly &mdash; no login, no refresh needed. Be a good sport about it.</p>
+
+  <div id="talk-live-status" class="notice-card" style="display:none;"></div>
+
+  <form id="talk-form" class="talk-form">
+    <input id="talk-name" class="talk-input" type="text" maxlength="40" placeholder="Your name (e.g. Turab)" required>
+    <textarea id="talk-message" class="talk-textarea" maxlength="400" rows="3" placeholder="Say what you came to say..." required></textarea>
+    <button type="submit" class="btn btn-gold talk-submit">Post It</button>
+  </form>
+
+  <div id="talk-feed" class="talk-feed">
+    <p class="talk-empty">Loading the board&hellip;</p>
+  </div>
+</section>
+
+<script src="firebase-config.js"></script>
+<script type="module" src="comments.js"></script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <span class="brand-mark small">LB</span>
+      <strong>Low Ballerz</strong> &middot; Yahoo Fantasy Football League #40967
+    </div>
+    <div class="footer-links">
+      <span>18 seasons strong since 2008</span>
+      <span>&middot;</span>
+      <span>Built for the league, by the league</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
