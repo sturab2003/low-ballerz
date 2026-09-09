@@ -20,7 +20,7 @@ NAV_ITEMS = [
     ("trades.html", "Trade Newsletter"),
     ("trade-analyzer.html", "Trade Analyzer"),
     ("trash-talk.html", "Trash Talk"),
-    ("futures.html", "Futures & Ballot"),
+    ("futures.html", "Predictions"),
     ("rules.html", "Rules"),
     ("recap.html", "Newsletter"),
 ]
@@ -315,7 +315,7 @@ def build_index():
     <a class="link-card" href="trades.html"><h3>Trade Newsletter</h3><p>Every trade from 2021-2025, graded with the benefit of hindsight.</p></a>
     <a class="link-card" href="trade-analyzer.html"><h3>Trade Analyzer</h3><p>Pick two teams and get an instant value verdict on any trade.</p></a>
     <a class="link-card" href="trash-talk.html"><h3>Trash Talk Board</h3><p>The receipts. Cold, hard, stat-backed disrespect.</p></a>
-    <a class="link-card" href="futures.html"><h3>Futures &amp; Ballot</h3><p>2026 championship odds and a live predictions ballot.</p></a>
+    <a class="link-card" href="futures.html"><h3>Predictions</h3><p>Lock in your picks for the 2026 season and see everyone else's live.</p></a>
     <a class="link-card" href="rules.html"><h3>League Rules</h3><p>Scoring settings, roster requirements, waivers, trades and playoff format.</p></a>
     <a class="link-card" href="recap.html"><h3>Newsletter</h3><p>The 2025 season recap, superlatives, awards, and a weekly 2026 template.</p></a>
   </div>
@@ -1438,33 +1438,11 @@ def build_draft_central():
 # FUTURES & BALLOT
 # ---------------------------------------------------------------
 def build_futures():
-    odds_list = compute_futures()
-    odds_rows = ""
-    for mgr, team, prob, odds, c in odds_list:
-        odds_rows += f'''
-    <tr>
-      <td class="champ-cell">{mgr}</td>
-      <td>{team}</td>
-      <td>{odds}</td>
-      <td>{manager_bio(c)}</td>
-    </tr>'''
-
     body = f'''
 <section class="page-hero">
-  <p class="eyebrow">2026 Preseason &middot; For Fun Only</p>
-  <h1>Futures &amp; Ballot</h1>
-  <p class="hero-sub">Championship odds computed from real career data (titles, podiums, 2025 finish) &mdash; not a sportsbook, just bragging-rights math. Cast your predictions below and see everyone else's live.</p>
-</section>
-
-<section class="section">
-  <h2 class="section-title">2026 Championship Odds</h2>
-  <div class="table-wrap">
-    <table class="data-table">
-      <thead><tr><th>Manager</th><th>Team</th><th>Odds</th><th>Why</th></tr></thead>
-      <tbody>{odds_rows}</tbody>
-    </table>
-  </div>
-  <p class="table-footnote">Odds formula: 3 points per title + 1 point per career podium finish + a bonus for 2025 finish, converted to implied probability then American odds format. Purely for fun.</p>
+  <p class="eyebrow">2026 Preseason</p>
+  <h1>Predictions</h1>
+  <p class="hero-sub">Cast your predictions for the 2026 season and see everyone else's live.</p>
 </section>
 
 <section class="section">
@@ -1489,7 +1467,7 @@ def build_futures():
 <script src="firebase-config.js"></script>
 <script type="module" src="predictions.js"></script>
 '''
-    return page("Futures & Ballot", "futures.html", body, "2026 championship odds and league predictions ballot for the Low Ballerz fantasy football league.")
+    return page("Predictions", "futures.html", body, "2026 season predictions ballot for the Low Ballerz fantasy football league.")
 
 # ---------------------------------------------------------------
 # TRADE NEWSLETTER
