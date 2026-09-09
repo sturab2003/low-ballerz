@@ -18,6 +18,7 @@ NAV_ITEMS = [
     ("draft.html", "Draft Recap"),
     ("keepers.html", "Keepers"),
     ("trades.html", "Trade Newsletter"),
+    ("trade-analyzer.html", "Trade Analyzer"),
     ("trash-talk.html", "Trash Talk"),
     ("futures.html", "Futures & Ballot"),
     ("rules.html", "Rules"),
@@ -312,6 +313,7 @@ def build_index():
     <a class="link-card" href="draft.html"><h3>Draft Recap</h3><p>Full 2026 draft board and grades, plus the 2025 draft archive.</p></a>
     <a class="link-card" href="keepers.html"><h3>Keepers</h3><p>2026 keepers by team, longest active streaks, and the new rules starting 2027.</p></a>
     <a class="link-card" href="trades.html"><h3>Trade Newsletter</h3><p>Every trade from 2021-2025, graded with the benefit of hindsight.</p></a>
+    <a class="link-card" href="trade-analyzer.html"><h3>Trade Analyzer</h3><p>Pick two teams and get an instant value verdict on any trade.</p></a>
     <a class="link-card" href="trash-talk.html"><h3>Trash Talk Board</h3><p>The receipts. Cold, hard, stat-backed disrespect.</p></a>
     <a class="link-card" href="futures.html"><h3>Futures &amp; Ballot</h3><p>2026 championship odds and a live predictions ballot.</p></a>
     <a class="link-card" href="rules.html"><h3>League Rules</h3><p>Scoring settings, roster requirements, waivers, trades and playoff format.</p></a>
