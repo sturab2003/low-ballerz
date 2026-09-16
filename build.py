@@ -305,7 +305,7 @@ def build_index():
   <div class="link-grid">
     <a class="link-card" href="standings.html"><h3>Standings</h3><p>Live 2026 standings through Week {current_week_2026}, plus the full 2025 final standings archive.</p></a>
     <a class="link-card" href="scores.html"><h3>Weekly Scores</h3><p>Every 2026 matchup as the season unfolds, plus the complete 2025 season archive.</p></a>
-    <a class="link-card" href="power-rankings.html"><h3>Power Rankings</h3><p>Way-too-early 2026 power rankings based on last year's results and offseason moves.</p></a>
+    <a class="link-card" href="power-rankings.html"><h3>Power Rankings</h3><p>2026 power rankings through Week {current_week_2026}, updated weekly as results come in.</p></a>
     <a class="link-card" href="history.html"><h3>History &amp; Records</h3><p>All-time champions dating back to 2008, plus single-season records.</p></a>
     <a class="link-card" href="managers.html"><h3>Managers</h3><p>Every current manager's trophy case and career highlights.</p></a>
     <a class="link-card" href="records.html"><h3>All-Time Records</h3><p>Sortable career ledger &mdash; titles, podiums and 2025 results.</p></a>
@@ -486,22 +486,27 @@ def build_scores():
 # ---------------------------------------------------------------
 # POWER RANKINGS
 # ---------------------------------------------------------------
+# Post-Week-1 2026 power rankings. Order follows the live STANDINGS_2026 table
+# (record, then PF as tiebreak, same as Yahoo) and every number in the blurbs
+# is pulled straight from WEEKLY_SCORES_2026 / STANDINGS_2026 -- no projections
+# or invented stats. Re-derive this list each week as WEEKLY_SCORES_2026 grows.
 POWER_RANKINGS_2026 = [
-    ("Mamba Mentality", "kumail", 1, "Defending champion, and they did it the hard way — a 4-seed that knocked off the undefeated #1 overall team in the semis, then won the title by 0.48 points. Nothing here suggests a fluke: top-3 in PF two years running."),
-    ("Scypher", "Sadiq", 2, "Went a perfect 14-0 in the regular season with the league's best scoring offense (2660.16 PF) — then blew the semifinal and settled for 3rd. The commissioner's team has the horses; the postseason nerves are the only question."),
-    ("Christian My Calf Hurt", "Sarosh", 3, "Runner-up by the width of a single stat correction. Consistent all year, playoff-tested, and one of only two teams to make the championship game."),
-    ("Hells Angels", "omar", 4, "9-5 with the best point differential outside the top 3, plus the league's fattest waiver war chest heading into the offseason ($55 left). Quietly one of the most complete rosters in the league."),
-    ("Sahara and Sahil", "Meisam", 5, "9-5 and top-6 in scoring, but flamed out early in the playoffs. The pieces are good; the seeding tiebreakers weren't kind."),
-    ("Hakka PUKA!!", "Parvez", 6, "A grinder — 7-7 in the regular season but scrapped its way to a 5th-place playoff finish and stayed within a possession of a title shot most weeks."),
-    ("Hurts My Brain", "Hussain", 7, "5-9 masked a genuinely dangerous offense that dropped a 216-point week. If the injury luck turns, this team jumps fast."),
-    ("Immaculate Concepcion", "Hassnain", 8, "7-7 with the widest week-to-week swings in the league (a 74.98 floor and a 211.06 ceiling). Boom or bust, literally."),
-    ("Chase the Baker Ladd!", "Turab", 9, "6-8, 10th place, but opened the season with a signature win over the eventual champ. Consistency is the 2026 mandate."),
-    ("Philly Illy", "Ilyas", 10, "5-9 but never bottom of the barrel — a middling scoring profile that needs difference-makers, not just depth."),
-    ("Ali Khalid LLC", "wiseonekms", 11, "5-9 despite the fewest roster moves in the league (11) and $70 of FAAB left unused. A quieter approach than most, and the results weren't there — a retool, not a rebuild."),
-    ("This hill I die on", "wajahat z", 12, "3-11, the league's lowest scoring offense (2026.46 PF) and its highest points-allowed. Nowhere to go but up."),
+    ("Scypher", "Sadiq", 1, "1-0 with the league's highest score of the week (249.70), but it wasn't easy — held off Sahara and Sahil by just 10.82, the closest game of Week 1. The scoring ceiling is obvious; the margin says this league is deep."),
+    ("Reed A (little) Mor", "wajahat z", 2, "1-0, 206.56 points, a comfortable 44.34-point win over Philly Illy. Third-highest score in the league to open the year."),
+    ("Mamba Mentality", "kumail", 3, "The defending champion opened 1-0 at 196.28 points, beating Hakka PUKA!! Jr Jr by 46.82. Business as usual for the reigning title holder."),
+    ("Ali Khalid LLC", "wiseonekms", 4, "1-0 at 191.62 points, a 39.46-point win over Rico Suave. Solid, unspectacular start."),
+    ("Hells Angels", "omar", 5, "1-0 at 180.98 points, the narrowest of the non-Scypher wins — a 15.16-point margin over Christian My Calf Hurt."),
+    ("Chase the Baker Ladd!", "Turab", 6, "1-0, but the headline is the margin, not the total — 164.94 points was the lowest score among Week 1 winners, yet it was still enough for a 68.26-point blowout over Immaculate Concepcion, the biggest win of the week."),
+    ("Sahara and Sahil", "Meisam", 7, "0-1 despite 238.88 points, the second-highest score in the league — this was the 10.82-point nail-biter lost to Scypher. Unlucky more than outplayed."),
+    ("Christian My Calf Hurt", "Sarosh", 8, "0-1 at 165.82 points, falling to Hells Angels by 15.16 in Week 1's second-closest game."),
+    ("Philly Illy", "Ilyas", 9, "0-1 at 162.22 points, a 44.34-point loss to Reed A (little) Mor to open the season."),
+    ("Rico Suave", "Hussain", 10, "0-1 at 152.16 points, dropping Week 1 to Ali Khalid LLC by 39.46."),
+    ("Hakka PUKA!! Jr Jr", "Parvez", 11, "0-1 at 149.46 points, a 46.82-point loss to Mamba Mentality to start the year."),
+    ("Immaculate Concepcion", "Hassnain", 12, "0-1 with the league's lowest score of the week (96.68) and the biggest loss — 68.26 points behind Chase the Baker Ladd!. A get-right Week 2 is a must."),
 ]
 
 def build_power_rankings():
+    current_week_2026 = max(D.WEEKLY_SCORES_2026.keys()) if D.WEEKLY_SCORES_2026 else 0
     cards = ""
     for team, mgr, rank, blurb in POWER_RANKINGS_2026:
         cards += f'''
@@ -514,15 +519,15 @@ def build_power_rankings():
     </div>'''
     body = f'''
 <section class="page-hero">
-  <p class="eyebrow">Way-Too-Early &middot; 2026 Preseason</p>
+  <p class="eyebrow">2026 Season &middot; Through Week {current_week_2026}</p>
   <h1>Power Rankings</h1>
-  <p class="hero-sub">Since the 2026 season hasn't kicked off yet, these preseason rankings are built from 2025 final standings, scoring trends and offseason activity. Once Week 1 is in the books, it's all about results.</p>
+  <p class="hero-sub">Updated after Week {current_week_2026} &mdash; ranked by this season's actual results (record, then points for), with real scores and margins behind every ranking. Refreshed weekly as the season goes.</p>
 </section>
 <section class="section">
   <div class="rank-list">{cards}</div>
 </section>
 '''
-    return page("Power Rankings", "power-rankings.html", body, "2026 preseason power rankings for the Low Ballerz fantasy football league.")
+    return page("Power Rankings", "power-rankings.html", body, f"2026 power rankings for the Low Ballerz fantasy football league, updated through Week {current_week_2026}.")
 
 # ---------------------------------------------------------------
 # HISTORY
