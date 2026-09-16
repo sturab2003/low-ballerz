@@ -228,6 +228,7 @@ def compute_futures():
 def build_index():
     champ = D.STANDINGS_2025[0]
     banners = build_banner_cards()
+    current_week_2026 = max(D.WEEKLY_SCORES_2026.keys()) if D.WEEKLY_SCORES_2026 else 0
     body = f'''
 <section class="hero">
   <div class="hero-inner">
@@ -275,16 +276,16 @@ def build_index():
 <section class="section">
   <h2 class="section-title">2026 Season Status</h2>
   <div class="notice-card">
-    <p><strong>The draft is done.</strong> All 12 rosters are set after the live draft on <strong>Saturday, August 22</strong> &mdash; see the full results on <a href="draft.html">Draft Recap &amp; Grades</a>. Standings and weekly scores below still reflect the completed <strong>2025 season</strong> &mdash; this page will start tracking live 2026 results once Week 1 kicks off.</p>
+    <p><strong>Week {current_week_2026} is in the books.</strong> The 2026 season is live &mdash; standings and weekly scores below now reflect real games, updated weekly. See the full draft results on <a href="draft.html">Draft Recap &amp; Grades</a>.</p>
   </div>
 </section>
 
 <section class="section">
-  <h2 class="section-title">2025 Final Standings — Top 3</h2>
+  <h2 class="section-title">2026 Standings — Top 3 (through Week {current_week_2026})</h2>
   <div class="podium">
 '''
     medals = ["gold", "silver", "bronze"]
-    for i, row in enumerate(D.STANDINGS_2025[:3]):
+    for i, row in enumerate(D.STANDINGS_2026[:3]):
         rank, team, rec, pf, pa, wv, mv = row
         body += f'''
     <div class="podium-card {medals[i]}">
@@ -302,8 +303,8 @@ def build_index():
 <section class="section">
   <h2 class="section-title">Explore the League</h2>
   <div class="link-grid">
-    <a class="link-card" href="standings.html"><h3>Standings</h3><p>Full 2025 final standings with records, points for/against and waiver activity.</p></a>
-    <a class="link-card" href="scores.html"><h3>Weekly Scores</h3><p>Every matchup from every week of the 2025 season, regular season through the championship.</p></a>
+    <a class="link-card" href="standings.html"><h3>Standings</h3><p>Live 2026 standings through Week {current_week_2026}, plus the full 2025 final standings archive.</p></a>
+    <a class="link-card" href="scores.html"><h3>Weekly Scores</h3><p>Every 2026 matchup as the season unfolds, plus the complete 2025 season archive.</p></a>
     <a class="link-card" href="power-rankings.html"><h3>Power Rankings</h3><p>Way-too-early 2026 power rankings based on last year's results and offseason moves.</p></a>
     <a class="link-card" href="history.html"><h3>History &amp; Records</h3><p>All-time champions dating back to 2008, plus single-season records.</p></a>
     <a class="link-card" href="managers.html"><h3>Managers</h3><p>Every current manager's trophy case and career highlights.</p></a>
@@ -327,12 +328,28 @@ def build_index():
 # STANDINGS
 # ---------------------------------------------------------------
 def build_standings():
-    rows = ""
+    current_week_2026 = max(D.WEEKLY_SCORES_2026.keys()) if D.WEEKLY_SCORES_2026 else 0
+
+    rows_2026 = ""
+    for rank, team, rec, pf, pa, wv, mv in D.STANDINGS_2026:
+        cls = "row-playoff" if rank <= 6 else ""
+        rows_2026 += f'''
+    <tr class="{cls}">
+      <td class="rank-cell">{rank}</td>
+      <td>{team_pill(team)}</td>
+      <td>{rec}</td>
+      <td>{fmt_score(pf)}</td>
+      <td>{fmt_score(pa)}</td>
+      <td>{money(wv)}</td>
+      <td>{mv}</td>
+    </tr>'''
+
+    rows_2025 = ""
     for rank, team, rec, pf, pa, wv, mv in D.STANDINGS_2025:
         cls = ""
         if rank == 1: cls = "row-champ"
         elif rank <= 6: cls = "row-playoff"
-        rows += f'''
+        rows_2025 += f'''
     <tr class="{cls}">
       <td class="rank-cell">{rank}{' &#127942;' if rank==1 else ''}</td>
       <td>{team_pill(team)}</td>
@@ -342,42 +359,58 @@ def build_standings():
       <td>{money(wv)}</td>
       <td>{mv}</td>
     </tr>'''
+
     body = f'''
 <section class="page-hero">
-  <p class="eyebrow">2025 Season &middot; Final</p>
+  <p class="eyebrow">Standings</p>
   <h1>Standings</h1>
-  <p class="hero-sub">Final placement for the 2025 season, including the playoff bracket. The 2026 regular-season table will populate here once games kick off.</p>
+  <p class="hero-sub">Live 2026 regular-season standings, updated weekly &mdash; plus the full 2025 final standings archive.</p>
 </section>
 <section class="section">
-  <div class="table-wrap">
-    <table class="data-table">
-      <thead><tr><th>Rank</th><th>Team</th><th>Record</th><th>PF</th><th>PA</th><th>Waiver $</th><th>Moves</th></tr></thead>
-      <tbody>{rows}</tbody>
-    </table>
+  <div class="season-tabs">
+    <button class="season-tab active" data-season="standings-2026">2026 Season (Live &middot; Week {current_week_2026})</button>
+    <button class="season-tab" data-season="standings-2025">2025 Season (Final)</button>
   </div>
-  <div class="legend">
-    <span><i class="dot dot-champ"></i> Champion</span>
-    <span><i class="dot dot-playoff"></i> Made the playoffs (top 6)</span>
+
+  <div class="season-panel active" id="standings-2026">
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Rank</th><th>Team</th><th>Record</th><th>PF</th><th>PA</th><th>Waiver $</th><th>Moves</th></tr></thead>
+        <tbody>{rows_2026}</tbody>
+      </table>
+    </div>
+    <div class="legend">
+      <span><i class="dot dot-playoff"></i> Currently in playoff position (top 6)</span>
+    </div>
+  </div>
+
+  <div class="season-panel" id="standings-2025">
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Rank</th><th>Team</th><th>Record</th><th>PF</th><th>PA</th><th>Waiver $</th><th>Moves</th></tr></thead>
+        <tbody>{rows_2025}</tbody>
+      </table>
+    </div>
+    <div class="legend">
+      <span><i class="dot dot-champ"></i> Champion</span>
+      <span><i class="dot dot-playoff"></i> Made the playoffs (top 6)</span>
+    </div>
   </div>
 </section>
 '''
-    return page("Standings", "standings.html", body, "2025 final standings for the Low Ballerz fantasy football league.")
+    return page("Standings", "standings.html", body, "Live 2026 standings and the 2025 final standings for the Low Ballerz fantasy football league.")
 
 # ---------------------------------------------------------------
 # SCORES
 # ---------------------------------------------------------------
-def build_scores():
-    tabs = ""
-    panels = ""
-    week_labels = {w: f"Week {w}" for w in range(1,15)}
-    all_weeks = list(range(1,15))
-    for i, w in enumerate(all_weeks):
-        active = "active" if i == 0 else ""
-        tabs += f'<button class="week-tab {active}" data-week="w{w}">{week_labels[w]}</button>'
-        matches = ""
-        for a, sa, b, sb in D.WEEKLY_SCORES_2025[w]:
-            a_win = sa > sb
-            matches += f'''
+def _matchup_card(a, sa, b, sb):
+    if sa is None:
+        return f'''
+        <div class="matchup-card bye-card">
+          <div class="matchup-team winner"><span class="mt-name">{a}</span><span class="mt-score">BYE</span></div>
+        </div>'''
+    a_win = sa > sb
+    return f'''
         <div class="matchup-card">
           <div class="matchup-team {'winner' if a_win else ''}">
             <span class="mt-name">{a}</span>
@@ -389,49 +422,66 @@ def build_scores():
             <span class="mt-score">{fmt_score(sb)}</span>
           </div>
         </div>'''
-        panels += f'<div class="week-panel {active}" id="w{w}"><div class="matchup-grid">{matches}</div></div>'
 
-    # playoffs
+def build_scores():
+    current_week_2026 = max(D.WEEKLY_SCORES_2026.keys()) if D.WEEKLY_SCORES_2026 else 0
+
+    # ---- 2026 (live, in-progress) ----
+    tabs_2026 = ""
+    panels_2026 = ""
+    weeks_2026 = sorted(D.WEEKLY_SCORES_2026.keys())
+    for i, w in enumerate(weeks_2026):
+        active = "active" if i == len(weeks_2026) - 1 else ""
+        tabs_2026 += f'<button class="week-tab {active}" data-week="s26w{w}">Week {w}</button>'
+        matches = "".join(_matchup_card(a, sa, b, sb) for a, sa, b, sb in D.WEEKLY_SCORES_2026[w])
+        panels_2026 += f'<div class="week-panel {active}" id="s26w{w}"><div class="matchup-grid">{matches}</div></div>'
+
+    # ---- 2025 (final archive) ----
+    tabs_2025 = ""
+    panels_2025 = ""
+    week_labels = {w: f"Week {w}" for w in range(1,15)}
+    all_weeks = list(range(1,15))
+    for i, w in enumerate(all_weeks):
+        active = "active" if i == 0 else ""
+        tabs_2025 += f'<button class="week-tab {active}" data-week="s25w{w}">{week_labels[w]}</button>'
+        matches = "".join(_matchup_card(a, sa, b, sb) for a, sa, b, sb in D.WEEKLY_SCORES_2025[w])
+        panels_2025 += f'<div class="week-panel {active}" id="s25w{w}"><div class="matchup-grid">{matches}</div></div>'
+
     playoff_html = ""
     for round_name, games in D.PLAYOFF_BRACKET_2025.items():
         playoff_html += f'<h3 class="playoff-round-title">{round_name}</h3><div class="matchup-grid">'
         for a, sa, b, sb in games:
-            if sa is None:
-                playoff_html += f'''
-        <div class="matchup-card bye-card">
-          <div class="matchup-team winner"><span class="mt-name">{a}</span><span class="mt-score">BYE</span></div>
-        </div>'''
-                continue
-            a_win = sa > sb
-            playoff_html += f'''
-        <div class="matchup-card">
-          <div class="matchup-team {'winner' if a_win else ''}">
-            <span class="mt-name">{a}</span><span class="mt-score">{fmt_score(sa)}</span>
-          </div>
-          <div class="matchup-vs">vs</div>
-          <div class="matchup-team {'winner' if not a_win else ''}">
-            <span class="mt-name">{b}</span><span class="mt-score">{fmt_score(sb)}</span>
-          </div>
-        </div>'''
+            playoff_html += _matchup_card(a, sa, b, sb)
         playoff_html += "</div>"
 
     body = f'''
 <section class="page-hero">
-  <p class="eyebrow">2025 Season</p>
+  <p class="eyebrow">Weekly Scores</p>
   <h1>Weekly Scores</h1>
-  <p class="hero-sub">Every regular-season matchup (Weeks 1&ndash;14), plus the full playoff bracket. Click a week to jump to it.</p>
+  <p class="hero-sub">Live 2026 matchups as the season unfolds, plus the complete 2025 season archive with the full playoff bracket.</p>
 </section>
 <section class="section">
-  <h2 class="section-title">Regular Season</h2>
-  <div class="week-tabs">{tabs}</div>
-  <div class="week-panels">{panels}</div>
-</section>
-<section class="section">
-  <h2 class="section-title">Playoffs (Weeks 15&ndash;17)</h2>
-  {playoff_html}
+  <div class="season-tabs">
+    <button class="season-tab active" data-season="scores-2026">2026 Season (Live &middot; Week {current_week_2026})</button>
+    <button class="season-tab" data-season="scores-2025">2025 Season (Final)</button>
+  </div>
+
+  <div class="season-panel active" id="scores-2026">
+    <h2 class="section-title">Regular Season</h2>
+    <div class="week-tabs">{tabs_2026}</div>
+    <div class="week-panels">{panels_2026}</div>
+  </div>
+
+  <div class="season-panel" id="scores-2025">
+    <h2 class="section-title">Regular Season</h2>
+    <div class="week-tabs">{tabs_2025}</div>
+    <div class="week-panels">{panels_2025}</div>
+    <h2 class="section-title">Playoffs (Weeks 15&ndash;17)</h2>
+    {playoff_html}
+  </div>
 </section>
 '''
-    return page("Weekly Scores", "scores.html", body, "Every weekly matchup score from the 2025 Low Ballerz fantasy football season.")
+    return page("Weekly Scores", "scores.html", body, "Live 2026 weekly matchup scores plus the complete 2025 season archive for the Low Ballerz fantasy football league.")
 
 # ---------------------------------------------------------------
 # POWER RANKINGS

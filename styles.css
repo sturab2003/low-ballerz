@@ -318,10 +318,9 @@ img { max-width: 100%; display: block; }
 .team-pill { display: flex; flex-direction: column; font-weight: 700; }
 .team-pill small { font-weight: 500; color: var(--muted); font-size: 12px; }
 
-.egend { display: flex; gap: 20px; margin-top: 14px; font-size: 13px; color: var(--muted); }
+.legend { display: flex; gap: 20px; margin-top: 14px; font-size: 13px; color: var(--muted); }
 .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
 .dot-champ { background: var(--gold); }
-
 .dot-playoff { background: var(--navy); }
 
 .table-footnote { font-size: 12.5px; color: var(--muted); margin-top: 14px; }
@@ -341,6 +340,22 @@ img { max-width: 100%; display: block; }
 .week-tab.active { background: var(--navy); color: #fff; border-color: var(--navy); }
 .week-panel { display: none; }
 .week-panel.active { display: block; }
+
+/* ---------- Season tabs (live season vs. archive) ---------- */
+.season-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+.season-tab {
+  background: var(--card);
+  border: 2px solid var(--border);
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  color: var(--navy-dark);
+}
+.season-tab.active { background: var(--gold); color: var(--navy-dark); border-color: var(--gold); }
+.season-panel { display: none; }
+.season-panel.active { display: block; }
 
 .matchup-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
 .matchup-card {

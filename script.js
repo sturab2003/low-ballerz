@@ -21,6 +21,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  var seasonTabs = document.querySelectorAll('.season-tab');
+  if (seasonTabs.length) {
+    seasonTabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var season = tab.getAttribute('data-season');
+        document.querySelectorAll('.season-tab').forEach(function (t) { t.classList.remove('active'); });
+        document.querySelectorAll('.season-panel').forEach(function (p) { p.classList.remove('active'); });
+        tab.classList.add('active');
+        var panel = document.getElementById(season);
+        if (panel) panel.classList.add('active');
+      });
+    });
+  }
+
   // ---- Sortable tables (click header to sort) ----
   document.querySelectorAll('table.sortable').forEach(function (table) {
     var tbody = table.querySelector('tbody');
