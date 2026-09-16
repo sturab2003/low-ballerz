@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import json, os, re, sys
+from html import escape as html_escape
 sys.path.insert(0, os.path.dirname(__file__))
 import data as D
 
@@ -972,34 +973,83 @@ def build_keepers():
 # ---------------------------------------------------------------
 # TRASH TALK
 # ---------------------------------------------------------------
-TRASH_TALK = [
-    ("THE NUMBERS DON'T LIE", "Champ Scypher went 14-0 in the regular season, best record in franchise history — and still didn't win the title. 3rd place. Choke of the century, or just a really deep league?"),
-    ("RAZOR THIN", "Mamba Mentality won the 2025 championship by exactly 0.48 points over Christian My Calf Hurt. A single lucky stat correction either way and this whole banner gets an asterisk."),
-    ("THE BASEMENT", "This hill I die on finished dead last in points scored (2026.46) AND allowed the most points against (2480.28). Historically bad on both sides of the ball."),
-    ("ICE COLD", "Chig-Chig Boom posted a 74.98 in Week 11 — the single lowest score by any team all season. That's not a lineup, that's a cry for help."),
-    ("SPENT IT ALL AND GOT NOTHING", "Ali Khalid LLC made the fewest roster moves in the league (11) and sat on $70 of unused FAAB all year — and still finished 11th. Sometimes doing nothing doesn't pay off either."),
-    ("PAPER CHAMPS", "Champ Scypher dropped 246.08 in Week 12, one of the biggest weeks of the season — and still lost in the semifinals a few weeks later. Regular season stats don't play in the playoffs."),
-    ("OPENING DAY DISRESPECT", "You're Ma Nanga Guy beat the eventual champion, Mamba Mentality, in Week 1. Mamba then won the title anyway. Statement win, zero impact."),
-    ("FREE WEEK", "In Week 9, Ali Khalid LLC and Chig-Chig Boom combined for the lowest-scoring matchup of the season (85.92 to 86.56). Somebody had to win. Nobody deserved to."),
-]
+# Weekly WhatsApp group-chat recaps, posted to the league chat after each
+# week's games and mirrored here. Raw text as sent (WhatsApp's *bold*
+# markdown, plain newlines, a "----" style divider line under the title) --
+# _whatsapp_recap_html() below converts it to HTML. Add each new week's raw
+# text as a new entry; nothing else needs to change.
+WHATSAPP_RECAPS_2026 = {
+    1: """🏈 *WEEK 1 RECAP — LOW BALLERZ*
+━━━━━━━━━━━━━━━━━━━━
+
+*THE SCORES*
+Scypher (Sadiq) 249.70 def Sahara and Sahil (Meisam) 238.88
+Reed A (little) Mor (wajahat) 206.56 def Philly Illy (Ilyas) 162.22
+Mamba Mentality (kumail) 196.28 def Hakka PUKA!! Jr Jr (Parvez) 149.46
+Ali Khalid LLC (wiseonekms) 191.62 def Rico Suave (Hussain) 152.16
+Hells Angels (omar) 180.98 def Christian My Calf Hurt (Sarosh) 165.82
+Chase the Baker Ladd! (Turab) 164.94 def Immaculate Concepcion (Hassnain) 96.68
+
+*THE HEADLINES*
+
+🔥 *BEST IN SHOW.* Sadiq's 249.70 is the top score in the league... and he still nearly choked it away. Nothing is safe with this man.
+
+😬 *SWEATING BULLETS.* Sadiq survives Meisam by 10.82. Closest game of the week. Meisam, that's a moral victory — spend it wisely.
+
+💀 *MASSACRE.* Turab hung 68.26 points on Hassnain's head. 96.68 total?? That's not a lineup, that's a white flag.
+
+😴 *QUIET COMPETENCE.* Wajahat, Kumail, Khasim (Ali Khalid), and Omar all won like they had somewhere else to be. No drama, just Ws.
+
+*STANDINGS CHECK*
+1-0 (holding every playoff spot if we stopped today): Sadiq, Wajahat, Kumail, Khasim (Ali Khalid), Omar, Turab
+0-1 (already need a bounce-back): Meisam, Ilyas, Parvez, Hussain, Sarosh, Hassnain
+
+Week 2 starts now. Nobody's safe. 👀""",
+}
+
+def _whatsapp_recap_html(raw):
+    """Convert a raw WhatsApp recap message (WhatsApp *bold* markdown, blank-line
+    separated paragraphs, an optional divider line of box-drawing chars right
+    under the title) into safe HTML for the Trash Talk page."""
+    text = html_escape(raw.strip("\n"), quote=False)
+    lines = text.split("\n")
+    blocks, current = [], []
+    for line in lines:
+        stripped = line.strip()
+        if stripped and set(stripped) <= {"━", "-", "="}:
+            continue  # decorative divider line, not real content
+        if stripped == "":
+            if current:
+                blocks.append(current)
+                current = []
+        else:
+            current.append(line)
+    if current:
+        blocks.append(current)
+    html_blocks = []
+    for block in blocks:
+        block_html = [re.sub(r"\*(.+?)\*", r"<strong>\1</strong>", l) for l in block]
+        html_blocks.append("<p>" + "<br>".join(block_html) + "</p>")
+    return "".join(html_blocks)
 
 def build_trash_talk():
-    cards = ""
-    for headline, body_txt in TRASH_TALK:
-        cards += f'''
-    <div class="talk-card">
-      <h3>{headline}</h3>
-      <p>{body_txt}</p>
+    current_week_2026 = max(WHATSAPP_RECAPS_2026.keys()) if WHATSAPP_RECAPS_2026 else 0
+    recap_cards = ""
+    for w in sorted(WHATSAPP_RECAPS_2026.keys(), reverse=True):
+        recap_cards += f'''
+    <div class="recap-card">
+      <h3>Week {w} Recap</h3>
+      {_whatsapp_recap_html(WHATSAPP_RECAPS_2026[w])}
     </div>'''
     body = f'''
 <section class="page-hero">
   <p class="eyebrow">The Receipts</p>
   <h1>Trash Talk Board</h1>
-  <p class="hero-sub">Stat-backed disrespect from the 2025 season, plus a live board below where anyone in the league can drop their own take in real time.</p>
+  <p class="hero-sub">The weekly recap posted to the league's WhatsApp group, mirrored here after every week &mdash; plus a live board below where anyone in the league can drop their own take in real time.</p>
 </section>
 <section class="section">
-  <h2 class="section-title">The Official Burns</h2>
-  <div class="talk-grid">{cards}</div>
+  <h2 class="section-title">Weekly WhatsApp Recaps</h2>
+  <div class="recap-list">{recap_cards}</div>
 </section>
 
 <section class="section">
