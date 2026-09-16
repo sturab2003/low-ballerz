@@ -312,20 +312,21 @@ WEEKLY_SCORES_2026 = {
 # 2026 in-season standings, updated weekly from Yahoo's Standings module
 # (football.fantasysports.yahoo.com/f1/40967). Same format as STANDINGS_2025:
 # (rank, team, record, PF, PA, waiver_left, moves). waiver_left is FAAB $ left
-# of the $100 season budget; all 12 teams still have their full $100 after Week 1.
+# of the $100 season budget. Refreshed 2026-09-16 to pick up FAAB spend and
+# waiver/free-agent moves made since the initial Week 1 capture.
 STANDINGS_2026 = [
-    (1, "Scypher", "1-0-0", 249.70, 238.88, 100, 7),
-    (2, "Reed A (little) Mor", "1-0-0", 206.56, 162.22, 100, 7),
+    (1, "Scypher", "1-0-0", 249.70, 238.88, 99, 8),
+    (2, "Reed A (little) Mor", "1-0-0", 206.56, 162.22, 100, 9),
     (3, "Mamba Mentality", "1-0-0", 196.28, 149.46, 100, 5),
-    (4, "Ali Khalid LLC", "1-0-0", 191.62, 152.16, 100, 1),
+    (4, "Ali Khalid LLC", "1-0-0", 191.62, 152.16, 80, 3),
     (5, "Hells Angels", "1-0-0", 180.98, 165.82, 100, 1),
-    (6, "Chase the Baker Ladd!", "1-0-0", 164.94, 96.68, 100, 8),
-    (7, "Sahara and Sahil", "0-1-0", 238.88, 249.70, 100, 19),
-    (8, "Christian My Calf Hurt", "0-1-0", 165.82, 180.98, 100, 2),
-    (9, "Philly Illy", "0-1-0", 162.22, 206.56, 100, 13),
+    (6, "Chase the Baker Ladd!", "1-0-0", 164.94, 96.68, 95, 9),
+    (7, "Sahara and Sahil", "0-1-0", 238.88, 249.70, 96, 22),
+    (8, "Christian My Calf Hurt", "0-1-0", 165.82, 180.98, 100, 5),
+    (9, "Philly Illy", "0-1-0", 162.22, 206.56, 89, 18),
     (10, "Rico Suave", "0-1-0", 152.16, 191.62, 100, 1),
     (11, "Hakka PUKA!! Jr Jr", "0-1-0", 149.46, 196.28, 100, 0),
-    (12, "Immaculate Concepcion", "0-1-0", 96.68, 164.94, 100, 0),
+    (12, "Immaculate Concepcion", "0-1-0", 96.68, 164.94, 81, 2),
 ]
 
 ALL_TIME = [
