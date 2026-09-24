@@ -496,7 +496,7 @@ POWER_RANKINGS_2026 = [
     ("Chase the Baker Ladd!", "Turab", 2, "2-0 after knocking off last week's top scorer, beating Scypher 195.14–157.38 (+37.76). Two wins by a combined 106.02 points; 360.08 PF with the league's lowest points against (254.06)."),
     ("Ali Khalid LLC", "wiseonekms", 3, "2-0, but it took a grind — 144.58 was enough to edge Reed A (little) Mor by 10.12 in the closest game of Week 2. 336.20 PF is the lowest among the three unbeatens."),
     ("Sahara and Sahil", "Meisam", 4, "1-1 with the league's most points by a mile (442.22). Posted Week 2's top score (203.34) in a 52.92-point win over Hakka PUKA!! Jr Jr after losing a 238.88-point game in Week 1."),
-    ("Scypher", "Sadiq", 5, "1-1. Went from Week 1's top score (249.70) to 157.38 and a 37.76-point loss to Chase the Baker Ladd!. Still second in PF (407.08), but also leads the league in points against (434.02)."),
+    ("Scypher", "Sadiq", 5, "1-1, and already doing the Sadiq thing. Dropped a league-best 249.70 in Week 1, then fell off a 92.32-point cliff to 157.38 and got handled by Chase the Baker Ladd! by 37.76. Started Jaxson Dart in the superflex and got 0.80 points out of him. Second in PF (407.08), first in excuses."),
     ("Christian My Calf Hurt", "Sarosh", 6, "1-1 after a 184.06–156.54 win over Immaculate Concepcion (+27.52). 349.88 PF through two weeks."),
     ("Mamba Mentality", "kumail", 7, "1-1. The defending champ managed just 150.58 in Week 2 and fell to Rico Suave by 26.98. 346.86 PF."),
     ("Reed A (little) Mor", "wajahat z", 8, "1-1 after scoring 134.46 and losing to Ali Khalid LLC by 10.12, the week's closest margin. Went from 206.56 in Week 1 to a 72-point drop-off. 341.02 PF."),
@@ -801,7 +801,7 @@ def build_history():
 # DRAFT
 # ---------------------------------------------------------------
 DRAFT_GRADES_2025 = [
-    ("Champ Scypher", "A+", "1.02 Jahmyr Gibbs, 2.11 Josh Allen, 3.02 Jaxon Smith-Njigba. Turned this class into a 14-0 regular season and the league's best offense (2660 PF) — as good a draft-to-results translation as it gets."),
+    ("Champ Scypher", "A+", "1.02 Jahmyr Gibbs, 2.11 Josh Allen, 3.02 Jaxon Smith-Njigba. Turned this class into a 14-0 regular season and the league's best offense (2660 PF) — as good a draft-to-results translation as it gets. Then he got to the playoffs and forgot how football works. A+ draft, F playoffs."),
     ("Mamba Mentality", "A", "1.01 Ashton Jeanty plus 2.12 Marvin Harrison Jr. gave this roster a true bell-cow plus a difference-making WR2. Rode it to the title."),
     ("Christian My Calf Hurt", "A-", "1.11 Christian McCaffrey as the anchor, with Amon-Ra St. Brown falling to 2.02. Volatile due to McCaffrey's injury history, but the depth carried them to the championship game."),
     ("Hells Angels", "B+", "1.07 Nico Collins and a string of solid Round 2-4 value (Josh Jacobs, Davante Adams, James Cook) built a deep, well-rounded 9-5 roster."),
@@ -821,7 +821,7 @@ DRAFT_GRADES_2025 = [
 DRAFT_GRADES_2026 = [
     ("Immaculate Concepcion", "A+", "1.11 Jonathan Taylor (kept at a Round 1 cost) plus 2.02 Saquon Barkley gives this roster the best RB1/RB1 combo in the league. Add 3.11 Jaylen Waddle, 4.02 Terry McLaurin and 5.11 Sam LaPorta and this is a stacked, top-heavy monster with almost no weak spot."),
     ("Mamba Mentality", "A", "1.01 Ashton Jeanty and 3.01 Malik Nabers alone are league-winning assets, and 4.12 Patrick Mahomes gives a rock-solid floor at QB. The RB2 spot (Jeremiyah Love) and late flier (Travis Hunter) are boom-or-bust, but the top of this roster is as good as anyone's."),
-    ("Scypher", "A", "1.08 Jahmyr Gibbs and 12.08 De'Von Achane — both kept — is the best RB duo in the league relative to what it actually cost. 2.05 Nico Collins anchors the receiving corps. Quarterback is a total question mark (Dart, Shough, Tagovailoa), but the RB efficiency alone carries this class."),
+    ("Scypher", "A", "1.08 Jahmyr Gibbs and 12.08 De'Von Achane — both kept — is the best RB duo in the league relative to what it actually cost. 2.05 Nico Collins anchors the receiving corps. Quarterback is a total question mark (Dart, Shough, Tagovailoa), but the RB efficiency alone carries this class. The QB room, meanwhile, carries nothing — Dart put up 0.80 in Week 2. Good luck, Sadiq."),
     ("Hakka PUKA!!", "A", "1.03 Ja'Marr Chase is the safest true WR1 in the game, 2.10 Jayden Daniels (kept) is exceptional QB value, and 15.03 Puka Nacua (kept) is one of the single best keeper bargains in the league. Deep at every position with almost no holes."),
     ("Hells Angels", "A-", "1.04 Jaxon Smith-Njigba plus a kept RB1/RB2 in Josh Jacobs and James Cook III gives this team a high floor everywhere. 3.04 Trey McBride and 5.04 Bo Nix round out a quietly complete, well-balanced build."),
     ("Sahara and Sahil", "A-", "1.05 Josh Allen is the safest QB anchor available, 2.08 Kenneth Walker III and 3.05 Breece Hall give a strong RB1/RB2, and 13.05 Garrett Wilson (kept) is a ridiculous value at that cost. WR depth beyond Wilson is unproven, but the top of the roster is excellent."),
@@ -992,9 +992,9 @@ Chase the Baker Ladd! (Turab) 164.94 def Immaculate Concepcion (Hassnain) 96.68
 
 *THE HEADLINES*
 
-🔥 *BEST IN SHOW.* Sadiq's 249.70 is the top score in the league... and he still nearly choked it away. Nothing is safe with this man.
+🔥 *BEST IN SHOW (BARELY).* Sadiq's 249.70 is the top score in the league... and he STILL nearly choked it away. 14-0 last year, zero rings. Choking is a lifestyle for this man.
 
-😬 *SWEATING BULLETS.* Sadiq survives Meisam by 10.82. Closest game of the week. Meisam, that's a moral victory — spend it wisely.
+😬 *SWEATING BULLETS.* Sadiq survives Meisam by 10.82. Meisam scored 238 and lost, Sadiq scored 249 and still looked scared. Enjoy 1-0 Sadiq, you know how this ends.
 
 💀 *MASSACRE.* Turab hung 68.26 points on Hassnain's head. 96.68 total?? That's not a lineup, that's a white flag.
 
@@ -1029,6 +1029,8 @@ Rico Suave (Hussain) 177.56 def Mamba Mentality (kumail) 150.58
 *STANDINGS CHECK*
 2-0: Omar, Turab, Khasim (Ali Khalid)
 0-2: Parvez, Ilyas, Hassnain
+
+🤡 *THE SADIQ CORNER.* 249.70 last week, 157.38 this week. Dropped 92 points and got cooked by Turab by 37.76. Started Jaxson Dart and got 0.80 POINTS. Zero point eight. Leads the league in points against too, the universe hates him and honestly same. See you in the 3rd-place game again bro 🏆❌
 
 Week 3 loading. 👀""",
 }
@@ -1246,16 +1248,16 @@ def build_recap():
     <h2>2025 Season Recap: The Closest Title Ever</h2>
     <p class="article-meta">Final Recap &middot; Published after Week 17</p>
     <p>The 2025 Low Ballerz season will be remembered for one number: <strong>0.48</strong>. That's the margin by which <strong>Mamba Mentality (kumail)</strong> beat <strong>Christian My Calf Hurt (Sarosh)</strong> in the championship &mdash; 141.56 to 141.08 &mdash; capping off the closest title game in recent memory.</p>
-    <p>But the real story of the year belonged to <strong>Champ Scypher (Sadiq)</strong>, who authored the best regular season in franchise history at a perfect <strong>14-0</strong>, powered by a league-best 2660.16 points scored &mdash; including a 246.08-point explosion in Week 12, one of the biggest weeks of the season. As the #1 seed, Champ Scypher earned a bye into the semifinals... and lost to Mamba Mentality, the #4 seed, 204.02 to 182.94. A late run to the 3rd-place game salvaged some pride with a win over Hells Angels, but the undefeated season ended without a ring.</p>
+    <p>But the real story of the year belonged to <strong>Champ Scypher (Sadiq)</strong>, who named his team "Champ" before winning anything and then proved exactly why you shouldn't. He went a perfect <strong>14-0</strong> in the regular season with a league-best 2660.16 points &mdash; including a 246.08-point explosion in Week 12 &mdash; earned a bye as the #1 seed, and then lost his very first playoff game to the <strong>#4 seed</strong>, Mamba Mentality, 204.02 to 182.94. Fourteen straight wins and zero rings. He did win the 3rd-place game over Hells Angels, which is the fantasy football equivalent of a participation trophy, and we assume it's on his mantle.</p>
     <p>Mamba Mentality's title run is the better story anyway: a 7-7 team that snuck into the playoffs as the 4-seed, upset the league's best regular-season team in the semifinal, then survived a photo finish in the championship. Total 2025 vindication for kumail.</p>
     <p>At the bottom of the standings, <strong>This hill I die on (wajahat z)</strong> endured a rough 3-11 season with the league's lowest scoring offense, while <strong>Chig-Chig Boom</strong> posted the season's single lowest score &mdash; a 74.98 disaster in Week 11.</p>
-    <p>Now it's on to 2026. The draft went down on <strong>August 22</strong> &mdash; see the full results on <a href="draft.html">Draft Recap &amp; Grades</a> &mdash; and every team gets a clean slate. Except Scypher, who still has some explaining to do.</p>
+    <p>Now it's on to 2026. The draft went down on <strong>August 22</strong> &mdash; see the full results on <a href="draft.html">Draft Recap &amp; Grades</a> &mdash; and every team gets a clean slate. Except Scypher. Sadiq's slate is permanently stained with 14-0 and no trophy, and it will be brought up every single week until he fixes it.</p>
   </article>
 
   <article class="newsletter-article">
-    <h2>Week 1, 2026: Scypher Survives a Shootout</h2>
+    <h2>Week 1, 2026: Scypher Nearly Chokes a 249-Point Game</h2>
     <p class="article-meta">Week 1 Recap &middot; Published Sep 15, 2026</p>
-    <p>The 2026 season opened with the league's two highest scorers going toe-to-toe. <strong>Scypher (Sadiq)</strong> dropped a league-best <strong>249.70</strong> and still needed every point of it, holding off <strong>Sahara and Sahil (Meisam)</strong>'s 238.88 by just <strong>10.82</strong> &mdash; the closest matchup of the week, and a preview of how good both rosters look early.</p>
+    <p>The 2026 season opened with <strong>Scypher (Sadiq)</strong> dropping a league-best <strong>249.70</strong> &mdash; and somehow still needing every last decimal of it. <strong>Sahara and Sahil (Meisam)</strong> put up 238.88 and came within <strong>10.82</strong> of beating him, the closest matchup of the week. Only Sadiq could score the most points in the league and still make it a sweat. Enjoy it while it lasts, Sadiq &mdash; history says the collapse is coming.</p>
     <p>The week's loudest statement belonged to <strong>Chase the Baker Ladd! (Turab)</strong>, who ran over <strong>Immaculate Concepcion (Hassnain)</strong> 164.94 to 96.68 &mdash; a 68.26-point beatdown that stood as the biggest blowout of the week by a wide margin. Elsewhere, <strong>Reed A (little) Mor (wajahat z)</strong> opened with a comfortable 206.56&ndash;162.22 win over Philly Illy (Ilyas), <strong>Mamba Mentality (kumail)</strong> beat Hakka PUKA!! Jr Jr (Parvez) 196.28&ndash;149.46, <strong>Ali Khalid LLC (wiseonekms)</strong> topped Rico Suave (Hussain) 191.62&ndash;152.16, and <strong>Hells Angels (omar)</strong> edged Christian My Calf Hurt (Sarosh) 180.98&ndash;165.82.</p>
     <p>One week in, the six Week 1 winners &mdash; Scypher, Reed A (little) Mor, Mamba Mentality, Ali Khalid LLC, Hells Angels and Chase the Baker Ladd! &mdash; hold the six playoff spots if the season ended today. Way too early to mean anything, but somebody has to be on top heading into Week 2.</p>
   </article>
@@ -1264,7 +1266,8 @@ def build_recap():
     <h2>Week 2, 2026: Hells Angels Take Over the Top Spot</h2>
     <p class="article-meta">Week 2 Recap &middot; Published Sep 23, 2026</p>
     <p>Week 2's loudest result came from <strong>Hells Angels (omar)</strong>, who put up <strong>201.80</strong> and flattened <strong>Philly Illy (Ilyas)</strong>'s 114.80 &mdash; an <strong>87.00-point</strong> blowout, the biggest margin of the season so far and enough to vault Hells Angels to No. 1 in the standings at 2-0 with 382.78 points for.</p>
-    <p>The week's top score belonged to <strong>Sahara and Sahil (Meisam)</strong>, whose <strong>203.34</strong> handled Hakka PUKA!! Jr Jr (Parvez) by 52.92. After a 238.88-point loss in Week 1, Sahara and Sahil now lead the league in points for (442.22) by 35 points. <strong>Chase the Baker Ladd! (Turab)</strong> stayed perfect by knocking off last week's top scorer, beating <strong>Scypher (Sadiq)</strong> 195.14 to 157.38, and <strong>Ali Khalid LLC (wiseonekms)</strong> moved to 2-0 in the closest game of the week, a 144.58&ndash;134.46 win over Reed A (little) Mor (wajahat z) decided by just <strong>10.12</strong>.</p>
+    <p>The week's top score belonged to <strong>Sahara and Sahil (Meisam)</strong>, whose <strong>203.34</strong> handled Hakka PUKA!! Jr Jr (Parvez) by 52.92. After a 238.88-point loss in Week 1, Sahara and Sahil now lead the league in points for (442.22) by 35 points. <strong>Chase the Baker Ladd! (Turab)</strong> stayed perfect by dragging <strong>Scypher (Sadiq)</strong> back to earth, 195.14 to 157.38, and <strong>Ali Khalid LLC (wiseonekms)</strong> moved to 2-0 in the closest game of the week, a 144.58&ndash;134.46 win over Reed A (little) Mor (wajahat z) decided by just <strong>10.12</strong>.</p>
+    <p>A word on Sadiq, since the collapse arrived right on schedule. One week after posting the league's top score, he dropped <strong>92.32 points</strong> to 157.38, lost by 37.76, and started <strong>Jaxson Dart</strong> in his superflex spot for a grand total of <strong>0.80 points</strong> &mdash; on a projection of 24.30. He is now 1-1, leads the league in points against (434.02), and has officially run out of people to blame except himself.</p>
     <p>Elsewhere, <strong>Rico Suave (Hussain)</strong> pulled the upset of the week, beating defending champion Mamba Mentality (kumail) 177.56&ndash;150.58, and <strong>Christian My Calf Hurt (Sarosh)</strong> got into the win column with a 184.06&ndash;156.54 victory over Immaculate Concepcion (Hassnain).</p>
     <p>Two weeks in, three teams are unbeaten &mdash; Hells Angels, Chase the Baker Ladd! and Ali Khalid LLC &mdash; while Hakka PUKA!! Jr Jr, Philly Illy and Immaculate Concepcion are all still looking for their first win. Six teams sit in a 1-1 logjam in the middle, separated only by points for.</p>
   </article>
