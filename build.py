@@ -1729,6 +1729,38 @@ def build_trades():
 
 # ---------------------------------------------------------------
 
+
+# ---------------------------------------------------------------
+# TRADE ANALYZER (trade-analyzer.html is hand-built; only its roster data and
+# team dropdowns are regenerated here from D.ROSTERS_2026 / D.TRADE_VALUES_2026)
+# ---------------------------------------------------------------
+def build_trade_analyzer():
+    import json, re
+    path = os.path.join(OUT, "trade-analyzer.html")
+    with open(path, encoding="utf-8") as f:
+        html = f.read()
+    trade_data = {}
+    for team, players in D.ROSTERS_2026.items():
+        rows = []
+        for name, pos, _status in players:
+            value, keeper, final_year = D.TRADE_VALUES_2026[name]
+            rows.append({"name": name, "pos": pos, "value": value,
+                         "keeper": keeper, "keeperFinalYear": final_year})
+        rows.sort(key=lambda r: -r["value"])
+        trade_data[team] = rows
+    options = "".join(
+        f'<option value="{html_escape(t)}">{html_escape(t)} ({html_escape(D.MANAGERS.get(t, ""))})</option>'
+        for t in D.ROSTERS_2026)
+    html, n_opt = re.subn(
+        r'(<option value="">Select a team&hellip;</option>\n\s*)<option value=.*?\n',
+        lambda m: m.group(1) + options + "\n", html)
+    html, n_data = re.subn(
+        r'window\.LOW_BALLERZ_TRADE_DATA = \{.*?\};\n',
+        lambda m: "window.LOW_BALLERZ_TRADE_DATA = " + json.dumps(trade_data) + ";\n", html)
+    if n_opt != 2 or n_data != 1:
+        raise RuntimeError(f"trade-analyzer.html structure changed (options={n_opt}, data={n_data})")
+    return html
+
 PAGES = {
     "index.html": build_index,
     "standings.html": build_standings,
@@ -1746,6 +1778,7 @@ PAGES = {
     "futures.html": build_futures,
     "rules.html": build_rules,
     "recap.html": build_recap,
+    "trade-analyzer.html": build_trade_analyzer,
 }
 
 for fname, fn in PAGES.items():
