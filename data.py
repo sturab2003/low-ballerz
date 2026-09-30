@@ -315,26 +315,34 @@ WEEKLY_SCORES_2026 = {
         ("Hells Angels", 201.80, "Philly Illy", 114.80),
         ("Rico Suave", 177.56, "Mamba Mentality", 150.58),
     ],
+    3: [
+        ("Chase the Baker Ladd!", 156.64, "Sahara and Sahil", 162.02),
+        ("Scypher", 173.00, "Christian My Calf Hurt", 161.52),
+        ("Ali Khalid LLC", 196.14, "Hells Angels", 201.84),
+        ("Immaculate Concepcion", 121.70, "Philly Illy", 144.36),
+        ("Hakka PUKA!! Jr Jr", 185.84, "Rico Suave", 201.68),
+        ("Mamba Mentality", 217.50, "Reed A (little) Mor", 152.12),
+    ],
 }
 
 # 2026 in-season standings, updated weekly from Yahoo's Standings module
 # (football.fantasysports.yahoo.com/f1/40967). Same format as STANDINGS_2025:
 # (rank, team, record, PF, PA, waiver_left, moves). waiver_left is FAAB $ left
-# of the $100 season budget. Refreshed 2026-09-23 after Week 2 finalized
-# (Yahoo "Last standings update: Wed Sep 23 01:45am CDT").
+# of the $100 season budget. Refreshed 2026-09-30 after Week 3 finalized
+# (Yahoo "Last standings update: Wed Sep 30 01:44am CDT").
 STANDINGS_2026 = [
-    (1, "Hells Angels", "2-0-0", 382.78, 280.62, 100, 2),
-    (2, "Chase the Baker Ladd!", "2-0-0", 360.08, 254.06, 95, 9),
-    (3, "Ali Khalid LLC", "2-0-0", 336.20, 286.62, 80, 3),
-    (4, "Sahara and Sahil", "1-1-0", 442.22, 400.12, 92, 26),
-    (5, "Scypher", "1-1-0", 407.08, 434.02, 85, 11),
-    (6, "Christian My Calf Hurt", "1-1-0", 349.88, 337.52, 93, 7),
-    (7, "Mamba Mentality", "1-1-0", 346.86, 327.02, 100, 5),
-    (8, "Reed A (little) Mor", "1-1-0", 341.02, 306.80, 71, 10),
-    (9, "Rico Suave", "1-1-0", 329.72, 342.20, 100, 2),
-    (10, "Hakka PUKA!! Jr Jr", "0-2-0", 299.88, 399.62, 70, 1),
-    (11, "Philly Illy", "0-2-0", 277.02, 408.36, 71, 26),
-    (12, "Immaculate Concepcion", "0-2-0", 253.22, 349.00, 81, 2),
+    (1, "Hells Angels", "3-0-0", 584.62, 476.76, 100, 2),
+    (2, "Sahara and Sahil", "2-1-0", 604.24, 556.76, 87, 30),
+    (3, "Scypher", "2-1-0", 580.08, 595.54, 76, 16),
+    (4, "Mamba Mentality", "2-1-0", 564.36, 479.14, 100, 5),
+    (5, "Ali Khalid LLC", "2-1-0", 532.34, 488.46, 75, 5),
+    (6, "Rico Suave", "2-1-0", 531.40, 528.04, 100, 4),
+    (7, "Chase the Baker Ladd!", "2-1-0", 516.72, 416.08, 92, 11),
+    (8, "Christian My Calf Hurt", "1-2-0", 511.40, 510.52, 88, 8),
+    (9, "Reed A (little) Mor", "1-2-0", 493.14, 524.30, 40, 11),
+    (10, "Philly Illy", "1-2-0", 421.38, 530.06, 43, 33),
+    (11, "Hakka PUKA!! Jr Jr", "0-3-0", 485.72, 601.30, 70, 1),
+    (12, "Immaculate Concepcion", "0-3-0", 374.92, 493.36, 81, 2),
 ]
 
 ALL_TIME = [
