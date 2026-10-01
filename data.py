@@ -302,7 +302,7 @@ WEEKLY_SCORES_2025 = {
 # finalizes. Same format as WEEKLY_SCORES_2025: (teamA, scoreA, teamB, scoreB).
 WEEKLY_SCORES_2026 = {
     1: [
-        ("Chase the Baker Ladd!", 164.94, "Immaculate Concepcion", 96.68),
+        ("Underachievers", 164.94, "Immaculate Concepcion", 96.68),
         ("Scypher", 249.70, "Sahara and Sahil", 238.88),
         ("Ali Khalid LLC", 191.62, "Rico Suave", 152.16),
         ("Hells Angels", 180.98, "Christian My Calf Hurt", 165.82),
@@ -310,7 +310,7 @@ WEEKLY_SCORES_2026 = {
         ("Reed A (little) Mor", 206.56, "Philly Illy", 162.22),
     ],
     2: [
-        ("Chase the Baker Ladd!", 195.14, "Scypher", 157.38),
+        ("Underachievers", 195.14, "Scypher", 157.38),
         ("Ali Khalid LLC", 144.58, "Reed A (little) Mor", 134.46),
         ("Immaculate Concepcion", 156.54, "Christian My Calf Hurt", 184.06),
         ("Hakka PUKA!! Jr Jr", 150.42, "Sahara and Sahil", 203.34),
@@ -318,7 +318,7 @@ WEEKLY_SCORES_2026 = {
         ("Rico Suave", 177.56, "Mamba Mentality", 150.58),
     ],
     3: [
-        ("Chase the Baker Ladd!", 156.64, "Sahara and Sahil", 162.02),
+        ("Underachievers", 156.64, "Sahara and Sahil", 162.02),
         ("Scypher", 173.00, "Christian My Calf Hurt", 161.52),
         ("Ali Khalid LLC", 196.14, "Hells Angels", 201.84),
         ("Immaculate Concepcion", 121.70, "Philly Illy", 144.36),
@@ -339,7 +339,7 @@ STANDINGS_2026 = [
     (4, "Mamba Mentality", "2-1-0", 564.36, 479.14, 100, 5),
     (5, "Ali Khalid LLC", "2-1-0", 532.34, 488.46, 75, 5),
     (6, "Rico Suave", "2-1-0", 531.40, 528.04, 100, 4),
-    (7, "Chase the Baker Ladd!", "2-1-0", 516.72, 416.08, 92, 11),
+    (7, "Underachievers", "2-1-0", 516.72, 416.08, 92, 11),
     (8, "Christian My Calf Hurt", "1-2-0", 511.40, 510.52, 88, 8),
     (9, "Reed A (little) Mor", "1-2-0", 493.14, 524.30, 40, 11),
     (10, "Philly Illy", "1-2-0", 421.38, 530.06, 43, 33),
@@ -432,22 +432,22 @@ DRAFT_2025 = {
 # each round). Team names reflect each manager's 2026 rebrand where applicable
 # (e.g. "Champ Scypher" -> "Scypher"). Keepers appear at their locked-in round/team.
 DRAFT_2026 = {
-1: [("Ashton Jeanty","Mamba Mentality"),("Lamar Jackson","This hill I die on"),("Ja'Marr Chase","Hakka PUKA!!"),("Jaxon Smith-Njigba","Hells Angels"),("Josh Allen","Sahara and Sahil"),("Joe Burrow","Hurts My Brain"),("Bijan Robinson","Ali Khalid LLC"),("Jahmyr Gibbs","Scypher"),("CeeDee Lamb","Philly Illy"),("Christian McCaffrey","Christian My Calf Hurt"),("Jonathan Taylor","Immaculate Concepcion"),("Chase Brown","Chase the Baker Ladd!")],
-2: [("Omarion Hampton","Chase the Baker Ladd!"),("Saquon Barkley","Immaculate Concepcion"),("Jalen Hurts","Christian My Calf Hurt"),("A.J. Brown","Philly Illy"),("Nico Collins","Scypher"),("Drake London","Ali Khalid LLC"),("Rashee Rice","Hurts My Brain"),("Kenneth Walker III","Sahara and Sahil"),("Josh Jacobs","Hells Angels"),("Jayden Daniels","Hakka PUKA!!"),("Amon-Ra St. Brown","This hill I die on"),("Jeremiyah Love","Mamba Mentality")],
-3: [("Malik Nabers","Mamba Mentality"),("Derrick Henry","This hill I die on"),("Kyren Williams","Hakka PUKA!!"),("Trey McBride","Hells Angels"),("Breece Hall","Sahara and Sahil"),("DeVonta Smith","Hurts My Brain"),("Colston Loveland","Ali Khalid LLC"),("Zay Flowers","Scypher"),("Justin Herbert","Philly Illy"),("Tee Higgins","Christian My Calf Hurt"),("Jaylen Waddle","Immaculate Concepcion"),("Dak Prescott","Chase the Baker Ladd!")],
-4: [("Ladd McConkey","Chase the Baker Ladd!"),("Terry McLaurin","Immaculate Concepcion"),("Travis Kelce","Christian My Calf Hurt"),("Javonte Williams","Philly Illy"),("Jaxson Dart","Scypher"),("David Montgomery","Ali Khalid LLC"),("Tetairoa McMillan","Hurts My Brain"),("Tyler Warren","Sahara and Sahil"),("James Cook III","Hells Angels"),("Brock Purdy","Hakka PUKA!!"),("TreVeyon Henderson","This hill I die on"),("Patrick Mahomes","Mamba Mentality")],
-5: [("George Pickens","Mamba Mentality"),("Luther Burden III","This hill I die on"),("Travis Etienne Jr.","Hakka PUKA!!"),("Bo Nix","Hells Angels"),("Drake Maye","Sahara and Sahil"),("Matthew Stafford","Hurts My Brain"),("Jameson Williams","Ali Khalid LLC"),("D'Andre Swift","Scypher"),("Emeka Egbuka","Philly Illy"),("Bucky Irving","Christian My Calf Hurt"),("Sam LaPorta","Immaculate Concepcion"),("Davante Adams","Chase the Baker Ladd!")],
-6: [("Tucker Kraft","Chase the Baker Ladd!"),("Kyler Murray","Immaculate Concepcion"),("Mike Evans","Christian My Calf Hurt"),("DJ Moore","Philly Illy"),("Carnell Tate","Scypher"),("Jared Goff","Ali Khalid LLC"),("Christian Watson","Hurts My Brain"),("Parker Washington","Sahara and Sahil"),("DK Metcalf","Hells Angels"),("Marvin Harrison Jr.","Hakka PUKA!!"),("Jaylen Warren","This hill I die on"),("Michael Wilson","Mamba Mentality")],
-7: [("Sam Darnold","Mamba Mentality"),("Trevor Lawrence","This hill I die on"),("Brian Thomas Jr.","Hakka PUKA!!"),("Texans","Hells Angels"),("Chris Godwin Jr.","Sahara and Sahil"),("Bhayshul Tuten","Hurts My Brain"),("Jadarian Price","Ali Khalid LLC"),("Harold Fannin Jr.","Scypher"),("Caleb Williams","Philly Illy"),("Stefon Diggs","Christian My Calf Hurt"),("Jonathon Brooks","Immaculate Concepcion"),("Michael Pittman Jr.","Chase the Baker Ladd!")],
-8: [("Baker Mayfield","Chase the Baker Ladd!"),("Tony Pollard","Immaculate Concepcion"),("Rome Odunze","Christian My Calf Hurt"),("Kyle Pitts Sr.","Philly Illy"),("Tyler Shough","Scypher"),("Tank Dell","Ali Khalid LLC"),("Rico Dowdle","Hurts My Brain"),("Josh Downs","Sahara and Sahil"),("Rhamondre Stevenson","Hells Angels"),("Dalton Kincaid","Hakka PUKA!!"),("Jayden Reed","This hill I die on"),("Blake Corum","Mamba Mentality")],
-9: [("Chris Olave","Mamba Mentality"),("Mark Andrews","This hill I die on"),("Chuba Hubbard","Hakka PUKA!!"),("Xavier Worthy","Hells Angels"),("Daniel Jones","Sahara and Sahil"),("Malik Willis","Hurts My Brain"),("Fernando Mendoza","Ali Khalid LLC"),("Alec Pierce","Scypher"),("De'Zhaun Stribling","Philly Illy"),("J.K. Dobbins","Christian My Calf Hurt"),("Jordan Addison","Immaculate Concepcion"),("George Kittle","Chase the Baker Ladd!")],
-10: [("Jacoby Brissett","Chase the Baker Ladd!"),("C.J. Stroud","Immaculate Concepcion"),("Courtland Sutton","Christian My Calf Hurt"),("Rachaad White","Philly Illy"),("Jacory Croskey-Merritt","Scypher"),("Quentin Johnston","Ali Khalid LLC"),("Jordan Mason","Hurts My Brain"),("Kyle Monangai","Sahara and Sahil"),("Bryce Young","Hells Angels"),("Dallas Goedert","Hakka PUKA!!"),("Cam Ward","This hill I die on"),("Juwan Johnson","Mamba Mentality")],
-11: [("Carson Beck","Mamba Mentality"),("Wan'Dale Robinson","This hill I die on"),("RJ Harvey","Hakka PUKA!!"),("Jakobi Meyers","Hells Angels"),("Malik Washington","Sahara and Sahil"),("Cam Skattebo","Hurts My Brain"),("Jalen Coker","Ali Khalid LLC"),("Isaiah Likely","Scypher"),("Kenny Gainwell","Philly Illy"),("Matthew Golden","Christian My Calf Hurt"),("Aaron Jones Sr.","Immaculate Concepcion"),("Makai Lemon","Chase the Baker Ladd!")],
-12: [("Jordyn Tyson","Chase the Baker Ladd!"),("KC Concepcion","Immaculate Concepcion"),("Romeo Doubs","Christian My Calf Hurt"),("Dylan Sampson","Philly Illy"),("De'Von Achane","Scypher"),("Chig Okonkwo","Ali Khalid LLC"),("Brock Bowers","Hurts My Brain"),("Keaton Mitchell","Sahara and Sahil"),("Khalil Shakir","Hells Angels"),("Broncos","Hakka PUKA!!"),("Eagles","This hill I die on"),("Mike Washington Jr.","Mamba Mentality")],
-13: [("Tyler Allgeier","Mamba Mentality"),("Rashid Shaheed","This hill I die on"),("Aaron Rodgers","Hakka PUKA!!"),("Jake Ferguson","Hells Angels"),("Garrett Wilson","Sahara and Sahil"),("Denzel Boston","Hurts My Brain"),("Brian Robinson","Ali Khalid LLC"),("Jalen Nailor","Scypher"),("Jonah Coleman","Philly Illy"),("Chris Rodriguez Jr.","Christian My Calf Hurt"),("Deebo Samuel Sr.","Immaculate Concepcion"),("Keenan Allen","Chase the Baker Ladd!")],
-14: [("Justin Jefferson","Chase the Baker Ladd!"),("Hunter Henry","Immaculate Concepcion"),("Geno Smith","Christian My Calf Hurt"),("Rams","Philly Illy"),("Tyrone Tracy Jr.","Scypher"),("Omar Cooper Jr.","Ali Khalid LLC"),("Woody Marks","Hurts My Brain"),("Tre Tucker","Sahara and Sahil"),("Kirk Cousins","Hells Angels"),("Tyjae Spears","Hakka PUKA!!"),("Brenton Strange","This hill I die on"),("Seahawks","Mamba Mentality")],
-15: [("Zach Charbonnet","Mamba Mentality"),("Tank Bigsby","This hill I die on"),("Puka Nacua","Hakka PUKA!!"),("Patriots","Hells Angels"),("Braelon Allen","Sahara and Sahil"),("Adonai Mitchell","Hurts My Brain"),("Bills","Ali Khalid LLC"),("Tua Tagovailoa","Scypher"),("Dalton Schultz","Philly Illy"),("Vikings","Christian My Calf Hurt"),("Chargers","Immaculate Concepcion"),("Greg Dulcich","Chase the Baker Ladd!")],
-16: [("Quinshon Judkins","Chase the Baker Ladd!"),("Shedeur Sanders","Immaculate Concepcion"),("AJ Barner","Christian My Calf Hurt"),("MarShawn Lloyd","Philly Illy"),("Jaguars","Scypher"),("Jordan Love","Ali Khalid LLC"),("Ravens","Hurts My Brain"),("Alvin Kamara","Sahara and Sahil"),("Isiah Pacheco","Hells Angels"),("T.J. Hockenson","Hakka PUKA!!"),("Isaac TeSlaa","This hill I die on"),("Travis Hunter","Mamba Mentality")],
+1: [("Ashton Jeanty","Mamba Mentality"),("Lamar Jackson","Reed A (little) Mor"),("Ja'Marr Chase","Hakka PUKA!! Jr Jr"),("Jaxon Smith-Njigba","Hells Angels"),("Josh Allen","Sahara and Sahil"),("Joe Burrow","Rico Suave"),("Bijan Robinson","Ali Khalid LLC"),("Jahmyr Gibbs","Scypher"),("CeeDee Lamb","Philly Illy"),("Christian McCaffrey","Christian My Calf Hurt"),("Jonathan Taylor","Immaculate Concepcion"),("Chase Brown","Underachievers")],
+2: [("Omarion Hampton","Underachievers"),("Saquon Barkley","Immaculate Concepcion"),("Jalen Hurts","Christian My Calf Hurt"),("A.J. Brown","Philly Illy"),("Nico Collins","Scypher"),("Drake London","Ali Khalid LLC"),("Rashee Rice","Rico Suave"),("Kenneth Walker III","Sahara and Sahil"),("Josh Jacobs","Hells Angels"),("Jayden Daniels","Hakka PUKA!! Jr Jr"),("Amon-Ra St. Brown","Reed A (little) Mor"),("Jeremiyah Love","Mamba Mentality")],
+3: [("Malik Nabers","Mamba Mentality"),("Derrick Henry","Reed A (little) Mor"),("Kyren Williams","Hakka PUKA!! Jr Jr"),("Trey McBride","Hells Angels"),("Breece Hall","Sahara and Sahil"),("DeVonta Smith","Rico Suave"),("Colston Loveland","Ali Khalid LLC"),("Zay Flowers","Scypher"),("Justin Herbert","Philly Illy"),("Tee Higgins","Christian My Calf Hurt"),("Jaylen Waddle","Immaculate Concepcion"),("Dak Prescott","Underachievers")],
+4: [("Ladd McConkey","Underachievers"),("Terry McLaurin","Immaculate Concepcion"),("Travis Kelce","Christian My Calf Hurt"),("Javonte Williams","Philly Illy"),("Jaxson Dart","Scypher"),("David Montgomery","Ali Khalid LLC"),("Tetairoa McMillan","Rico Suave"),("Tyler Warren","Sahara and Sahil"),("James Cook III","Hells Angels"),("Brock Purdy","Hakka PUKA!! Jr Jr"),("TreVeyon Henderson","Reed A (little) Mor"),("Patrick Mahomes","Mamba Mentality")],
+5: [("George Pickens","Mamba Mentality"),("Luther Burden III","Reed A (little) Mor"),("Travis Etienne Jr.","Hakka PUKA!! Jr Jr"),("Bo Nix","Hells Angels"),("Drake Maye","Sahara and Sahil"),("Matthew Stafford","Rico Suave"),("Jameson Williams","Ali Khalid LLC"),("D'Andre Swift","Scypher"),("Emeka Egbuka","Philly Illy"),("Bucky Irving","Christian My Calf Hurt"),("Sam LaPorta","Immaculate Concepcion"),("Davante Adams","Underachievers")],
+6: [("Tucker Kraft","Underachievers"),("Kyler Murray","Immaculate Concepcion"),("Mike Evans","Christian My Calf Hurt"),("DJ Moore","Philly Illy"),("Carnell Tate","Scypher"),("Jared Goff","Ali Khalid LLC"),("Christian Watson","Rico Suave"),("Parker Washington","Sahara and Sahil"),("DK Metcalf","Hells Angels"),("Marvin Harrison Jr.","Hakka PUKA!! Jr Jr"),("Jaylen Warren","Reed A (little) Mor"),("Michael Wilson","Mamba Mentality")],
+7: [("Sam Darnold","Mamba Mentality"),("Trevor Lawrence","Reed A (little) Mor"),("Brian Thomas Jr.","Hakka PUKA!! Jr Jr"),("Texans","Hells Angels"),("Chris Godwin Jr.","Sahara and Sahil"),("Bhayshul Tuten","Rico Suave"),("Jadarian Price","Ali Khalid LLC"),("Harold Fannin Jr.","Scypher"),("Caleb Williams","Philly Illy"),("Stefon Diggs","Christian My Calf Hurt"),("Jonathon Brooks","Immaculate Concepcion"),("Michael Pittman Jr.","Underachievers")],
+8: [("Baker Mayfield","Underachievers"),("Tony Pollard","Immaculate Concepcion"),("Rome Odunze","Christian My Calf Hurt"),("Kyle Pitts Sr.","Philly Illy"),("Tyler Shough","Scypher"),("Tank Dell","Ali Khalid LLC"),("Rico Dowdle","Rico Suave"),("Josh Downs","Sahara and Sahil"),("Rhamondre Stevenson","Hells Angels"),("Dalton Kincaid","Hakka PUKA!! Jr Jr"),("Jayden Reed","Reed A (little) Mor"),("Blake Corum","Mamba Mentality")],
+9: [("Chris Olave","Mamba Mentality"),("Mark Andrews","Reed A (little) Mor"),("Chuba Hubbard","Hakka PUKA!! Jr Jr"),("Xavier Worthy","Hells Angels"),("Daniel Jones","Sahara and Sahil"),("Malik Willis","Rico Suave"),("Fernando Mendoza","Ali Khalid LLC"),("Alec Pierce","Scypher"),("De'Zhaun Stribling","Philly Illy"),("J.K. Dobbins","Christian My Calf Hurt"),("Jordan Addison","Immaculate Concepcion"),("George Kittle","Underachievers")],
+10: [("Jacoby Brissett","Underachievers"),("C.J. Stroud","Immaculate Concepcion"),("Courtland Sutton","Christian My Calf Hurt"),("Rachaad White","Philly Illy"),("Jacory Croskey-Merritt","Scypher"),("Quentin Johnston","Ali Khalid LLC"),("Jordan Mason","Rico Suave"),("Kyle Monangai","Sahara and Sahil"),("Bryce Young","Hells Angels"),("Dallas Goedert","Hakka PUKA!! Jr Jr"),("Cam Ward","Reed A (little) Mor"),("Juwan Johnson","Mamba Mentality")],
+11: [("Carson Beck","Mamba Mentality"),("Wan'Dale Robinson","Reed A (little) Mor"),("RJ Harvey","Hakka PUKA!! Jr Jr"),("Jakobi Meyers","Hells Angels"),("Malik Washington","Sahara and Sahil"),("Cam Skattebo","Rico Suave"),("Jalen Coker","Ali Khalid LLC"),("Isaiah Likely","Scypher"),("Kenny Gainwell","Philly Illy"),("Matthew Golden","Christian My Calf Hurt"),("Aaron Jones Sr.","Immaculate Concepcion"),("Makai Lemon","Underachievers")],
+12: [("Jordyn Tyson","Underachievers"),("KC Concepcion","Immaculate Concepcion"),("Romeo Doubs","Christian My Calf Hurt"),("Dylan Sampson","Philly Illy"),("De'Von Achane","Scypher"),("Chig Okonkwo","Ali Khalid LLC"),("Brock Bowers","Rico Suave"),("Keaton Mitchell","Sahara and Sahil"),("Khalil Shakir","Hells Angels"),("Broncos","Hakka PUKA!! Jr Jr"),("Eagles","Reed A (little) Mor"),("Mike Washington Jr.","Mamba Mentality")],
+13: [("Tyler Allgeier","Mamba Mentality"),("Rashid Shaheed","Reed A (little) Mor"),("Aaron Rodgers","Hakka PUKA!! Jr Jr"),("Jake Ferguson","Hells Angels"),("Garrett Wilson","Sahara and Sahil"),("Denzel Boston","Rico Suave"),("Brian Robinson","Ali Khalid LLC"),("Jalen Nailor","Scypher"),("Jonah Coleman","Philly Illy"),("Chris Rodriguez Jr.","Christian My Calf Hurt"),("Deebo Samuel Sr.","Immaculate Concepcion"),("Keenan Allen","Underachievers")],
+14: [("Justin Jefferson","Underachievers"),("Hunter Henry","Immaculate Concepcion"),("Geno Smith","Christian My Calf Hurt"),("Rams","Philly Illy"),("Tyrone Tracy Jr.","Scypher"),("Omar Cooper Jr.","Ali Khalid LLC"),("Woody Marks","Rico Suave"),("Tre Tucker","Sahara and Sahil"),("Kirk Cousins","Hells Angels"),("Tyjae Spears","Hakka PUKA!! Jr Jr"),("Brenton Strange","Reed A (little) Mor"),("Seahawks","Mamba Mentality")],
+15: [("Zach Charbonnet","Mamba Mentality"),("Tank Bigsby","Reed A (little) Mor"),("Puka Nacua","Hakka PUKA!! Jr Jr"),("Patriots","Hells Angels"),("Braelon Allen","Sahara and Sahil"),("Adonai Mitchell","Rico Suave"),("Bills","Ali Khalid LLC"),("Tua Tagovailoa","Scypher"),("Dalton Schultz","Philly Illy"),("Vikings","Christian My Calf Hurt"),("Chargers","Immaculate Concepcion"),("Greg Dulcich","Underachievers")],
+16: [("Quinshon Judkins","Underachievers"),("Shedeur Sanders","Immaculate Concepcion"),("AJ Barner","Christian My Calf Hurt"),("MarShawn Lloyd","Philly Illy"),("Jaguars","Scypher"),("Jordan Love","Ali Khalid LLC"),("Ravens","Rico Suave"),("Alvin Kamara","Sahara and Sahil"),("Isiah Pacheco","Hells Angels"),("T.J. Hockenson","Hakka PUKA!! Jr Jr"),("Isaac TeSlaa","Reed A (little) Mor"),("Travis Hunter","Mamba Mentality")],
 }
 
 LEAGUE_SETTINGS = [
@@ -469,7 +469,7 @@ LEAGUE_SETTINGS = [
     ("Trade Deadline", "November 28 (last week of the regular season) &mdash; see Keeper &amp; Trade Rules below for what's still allowed after"),
     ("Roster", "QB, WR, WR, WR, RB, RB, TE, W/T, Q/W/R/T, DEF, BN x6, IR"),
     ("Commissioner", "Sadiq (Scypher)"),
-    ("Asst. Commissioners", "Turab (Chase the Baker Ladd!), Meisam (Sahara and Sahil)"),
+    ("Asst. Commissioners", "Turab (Underachievers), Meisam (Sahara and Sahil)"),
     ("Last-Place Punishment", "Buys the group food at next year's draft party"),
 ]
 
@@ -528,17 +528,17 @@ SCORING = [
 # format: (draft_slot, team, manager)
 DRAFT_ORDER_2026 = [
     (1, "Mamba Mentality", "kumail"),
-    (2, "This hill I die on", "wajahat z"),
-    (3, "Hakka PUKA!!", "Parvez"),
+    (2, "Reed A (little) Mor", "wajahat z"),
+    (3, "Hakka PUKA!! Jr Jr", "Parvez"),
     (4, "Hells Angels", "omar"),
     (5, "Sahara and Sahil", "Meisam"),
-    (6, "Hurts My Brain", "Hussain"),
+    (6, "Rico Suave", "Hussain"),
     (7, "Ali Khalid LLC", "wiseonekms (Khasim)"),
     (8, "Scypher", "Sadiq"),
     (9, "Philly Illy", "Ilyas"),
     (10, "Christian My Calf Hurt", "Sarosh"),
     (11, "Immaculate Concepcion", "Hasnain"),
-    (12, "Chase the Baker Ladd!", "Turab"),
+    (12, "Underachievers", "Turab"),
 ]
 
 # format: team -> [(player, round_cost), (player, round_cost)]
@@ -546,15 +546,15 @@ KEEPERS_2026 = {
     "Scypher": [("Jahmyr Gibbs", 1), ("De'Von Achane", 12)],
     "Mamba Mentality": [("Chris Olave", 9), ("George Pickens", 5)],
     "Sahara and Sahil": [("Drake Maye", 5), ("Garrett Wilson", 13)],
-    "This hill I die on": [("Amon-Ra St. Brown", 2), ("Trevor Lawrence", 7)],
+    "Reed A (little) Mor": [("Amon-Ra St. Brown", 2), ("Trevor Lawrence", 7)],
     "Philly Illy": [("Emeka Egbuka", 5), ("Caleb Williams", 7)],
-    "Chase the Baker Ladd!": [("Justin Jefferson", 14), ("Quinshon Judkins", 16)],
-    "Hurts My Brain": [("Brock Bowers", 12), ("Cam Skattebo", 11)],
+    "Underachievers": [("Justin Jefferson", 14), ("Quinshon Judkins", 16)],
+    "Rico Suave": [("Brock Bowers", 12), ("Cam Skattebo", 11)],
     "Hells Angels": [("James Cook III", 4), ("Josh Jacobs", 2)],
     "Ali Khalid LLC": [("Jordan Love", 16), ("Bijan Robinson", 1)],
     "Christian My Calf Hurt": [("Christian McCaffrey", 1), ("Rome Odunze", 8)],
     "Immaculate Concepcion": [("Jonathan Taylor", 1), ("C.J. Stroud", 10)],
-    "Hakka PUKA!!": [("Puka Nacua", 15), ("Jayden Daniels", 2)],
+    "Hakka PUKA!! Jr Jr": [("Puka Nacua", 15), ("Jayden Daniels", 2)],
 }
 
 # Yahoo's official Top 200 Default Pre-Draft Rankings (Standard scoring), pulled
@@ -686,7 +686,7 @@ KEEPER_HISTORY = {
         "Drake Maye": (1, "Fresh 2025 pick; 2026 is his first year as a keeper."),
         "Garrett Wilson": (3, "Acquired via in-season trade from Ilyas on Oct 3, 2023 (for Alvin Kamara). First kept in 2024; 2026 is his 3rd straight year as a keeper."),
     },
-    "This hill I die on": {
+    "Reed A (little) Mor": {
         "Amon-Ra St. Brown": (1, "Acquired via in-season trade in 2025; 2026 is his first year as a keeper on this roster."),
         "Trevor Lawrence": (1, "New 2026 keeper selection (Round 7 cost); first year as a keeper on this roster."),
     },
@@ -694,11 +694,11 @@ KEEPER_HISTORY = {
         "Emeka Egbuka": (1, "New 2026 keeper selection (Round 5 cost); first year as a keeper on this roster."),
         "Caleb Williams": (1, "Fresh 2025 pick (Round 6); 2026 is his first year as a keeper."),
     },
-    "Chase the Baker Ladd!": {
+    "Underachievers": {
         "Justin Jefferson": (3, "On this roster since a 2023 trade; kept every year since 2024 (3rd straight year as a keeper)."),
         "Quinshon Judkins": (1, "Added off waivers in 2025; 2026 is his first year as a keeper."),
     },
-    "Hurts My Brain": {
+    "Rico Suave": {
         "Brock Bowers": (2, "Kept since 2025 (2nd straight year as a keeper)."),
         "Cam Skattebo": (1, "Acquired via in-season trade in 2025; 2026 is his first year as a keeper on this roster."),
     },
@@ -718,7 +718,7 @@ KEEPER_HISTORY = {
         "Jonathan Taylor": (1, "Fresh 2025 pick; 2026 is his first year as a keeper."),
         "C.J. Stroud": (1, "New 2026 keeper selection (Round 10 cost); first year as a keeper on this roster."),
     },
-    "Hakka PUKA!!": {
+    "Hakka PUKA!! Jr Jr": {
         "Puka Nacua": (3, "Kept every year since 2024 (3rd straight year as a keeper)."),
         "Jayden Daniels": (2, "Kept since 2025 (2nd straight year as a keeper)."),
     },
@@ -733,7 +733,7 @@ KEEPER_HISTORY = {
 CHAMPIONS_BY_MANAGER = {
     2025: ("Mamba Mentality", "kumail", "Mamba Mentality"),
     2024: ("Scypher", "Sadiq", "Scypher"),
-    2023: ("Hurts My Brain", "Hussain", "Hurts My Brain"),
+    2023: ("Hurts My Brain", "Hussain", "Rico Suave"),
     2022: ("Mamba Mentality", "kumail", "Mamba Mentality"),
     2021: ("Dalvin and the Chipmunks", "Hassnain", "Immaculate Concepcion"),
     2020: ("The Dynasty", "m", None),
@@ -741,8 +741,8 @@ CHAMPIONS_BY_MANAGER = {
     2018: ("KSolo", "wiseonekms", "Ali Khalid LLC"),
     2017: ("Scypher = poop", "m", None),
     2016: ("Scypher", "Sadiq", "Scypher"),
-    2015: ("Brady's Revenge", "Turab", "Chase the Baker Ladd!"),
-    2014: ("Hussain's Team", "Hussain", "Hurts My Brain"),
+    2015: ("Brady's Revenge", "Turab", "Underachievers"),
+    2014: ("Hussain's Team", "Hussain", "Rico Suave"),
     2013: ("Texans Revolution", "kumail", "Mamba Mentality"),
     2012: ("Wheeling and Dealing", "Meisam", "Sahara and Sahil"),
     2011: ("The footballerz 1", "Meisam", "Sahara and Sahil"),
@@ -781,10 +781,10 @@ PODIUM_FINISHES = [
 ]
 
 CURRENT_TEAM_BY_MANAGER = {
-    "kumail": "Mamba Mentality", "Sadiq": "Scypher", "Hussain": "Hurts My Brain",
-    "Meisam": "Sahara and Sahil", "Turab": "Chase the Baker Ladd!", "Hassnain": "Immaculate Concepcion",
+    "kumail": "Mamba Mentality", "Sadiq": "Scypher", "Hussain": "Rico Suave",
+    "Meisam": "Sahara and Sahil", "Turab": "Underachievers", "Hassnain": "Immaculate Concepcion",
     "wiseonekms": "Ali Khalid LLC", "Ilyas": "Philly Illy", "Sarosh": "Christian My Calf Hurt",
-    "Parvez": "Hakka PUKA!!", "omar": "Hells Angels", "wajahat z": "This hill I die on",
+    "Parvez": "Hakka PUKA!! Jr Jr", "omar": "Hells Angels", "wajahat z": "Reed A (little) Mor",
 }
 
 # Current 2026 rosters for all 12 teams, pulled from each team's roster page on

@@ -140,6 +140,8 @@ def mgr_slug(name):
     return re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
 
 STANDINGS_BY_TEAM_2025 = {row[1]: row for row in D.STANDINGS_2025}
+# Keyed by manager so team renames never break the 2025 lookup.
+STANDINGS_BY_MGR_2025 = {D.MANAGERS[row[1]]: row for row in D.STANDINGS_2025}
 
 def compute_manager_career(mgr):
     team = D.CURRENT_TEAM_BY_MANAGER.get(mgr)
@@ -148,7 +150,7 @@ def compute_manager_career(mgr):
     p1 = sum(1 for y, p in podiums if p == 1)
     p2 = sum(1 for y, p in podiums if p == 2)
     p3 = sum(1 for y, p in podiums if p == 3)
-    row = STANDINGS_BY_TEAM_2025.get(team)
+    row = STANDINGS_BY_MGR_2025.get(mgr)
     career = D.CAREER_RECORDS.get(mgr, {"W": 0, "L": 0, "T": 0, "seasons": 0, "first_year": None, "last_year": None})
     games = career["W"] + career["L"] + career["T"]
     win_pct = career["W"] / games if games else 0.0
@@ -493,12 +495,12 @@ def build_scores():
 # or invented stats. Re-derive this list each week as WEEKLY_SCORES_2026 grows.
 POWER_RANKINGS_2026 = [
     ("Hells Angels", "omar", 1, "3-0 and the league's last unbeaten team. Survived Ali Khalid LLC 201.84–196.14 (+5.70) with Week 3's second-highest score. Three wins by a combined 107.86 points; 584.62 PF."),
-    ("Sahara and Sahil", "Meisam", 2, "2-1 and winners of two straight. Took the closest game of Week 3, 162.02–156.64 over Chase the Baker Ladd! (+5.38), and still lead the league in points by a mile (604.24 PF)."),
+    ("Sahara and Sahil", "Meisam", 2, "2-1 and winners of two straight. Took the closest game of Week 3, 162.02–156.64 over Underachievers (+5.38), and still lead the league in points by a mile (604.24 PF)."),
     ("Scypher", "Sadiq", 3, "2-1, and No. 3 only because Yahoo breaks ties with points. Beat Christian My Calf Hurt 173.00–161.52, but Jahmyr Gibbs (51.40) and the Vikings D (29.00) did 80.40 of it — the other eight starters managed 92.60. Started an IR-tagged De'Von Achane projected for 0.00 and got 3.20. Second-most points against (595.54). 14-0 last year, zero rings; 2-1 means nothing."),
     ("Mamba Mentality", "kumail", 4, "2-1 and the defending champ is awake. Week 3's top score (217.50) and its biggest blowout, a 65.38-point win over Reed A (little) Mor. 564.36 PF."),
     ("Ali Khalid LLC", "wiseonekms", 5, "2-1 after the cruelest loss of the week: 196.14, the fourth-highest score in Week 3, and still lost to Hells Angels by 5.70. 532.34 PF."),
     ("Rico Suave", "Hussain", 6, "2-1 and winners of two straight. Posted 201.68 (third-highest of Week 3) to beat Hakka PUKA!! Jr Jr by 15.84. 531.40 PF."),
-    ("Chase the Baker Ladd!", "Turab", 7, "2-1 after the first loss of the season, 162.02–156.64 to Sahara and Sahil — the week's closest margin (5.38). Still the league's lowest points against (416.08), but sits seventh on the PF tiebreak (516.72)."),
+    ("Underachievers", "Turab", 7, "2-1 after the first loss of the season, 162.02–156.64 to Sahara and Sahil — the week's closest margin (5.38). Still the league's lowest points against (416.08), but sits seventh on the PF tiebreak (516.72)."),
     ("Christian My Calf Hurt", "Sarosh", 8, "1-2 after 161.52 came up 11.48 short against Scypher. 511.40 PF against 510.52 PA — about as even as it gets."),
     ("Reed A (little) Mor", "wajahat z", 9, "1-2 and two straight losses. 152.12 ran straight into the week's top score and lost by 65.38, the biggest blowout of Week 3. 493.14 PF."),
     ("Philly Illy", "Ilyas", 10, "1-2 and finally on the board: 144.36 was enough to beat Immaculate Concepcion by 22.66. 421.38 PF is second-lowest in the league."),
@@ -822,15 +824,15 @@ DRAFT_GRADES_2026 = [
     ("Immaculate Concepcion", "A+", "1.11 Jonathan Taylor (kept at a Round 1 cost) plus 2.02 Saquon Barkley gives this roster the best RB1/RB1 combo in the league. Add 3.11 Jaylen Waddle, 4.02 Terry McLaurin and 5.11 Sam LaPorta and this is a stacked, top-heavy monster with almost no weak spot."),
     ("Mamba Mentality", "A", "1.01 Ashton Jeanty and 3.01 Malik Nabers alone are league-winning assets, and 4.12 Patrick Mahomes gives a rock-solid floor at QB. The RB2 spot (Jeremiyah Love) and late flier (Travis Hunter) are boom-or-bust, but the top of this roster is as good as anyone's."),
     ("Scypher", "A", "1.08 Jahmyr Gibbs and 12.08 De'Von Achane — both kept — is the best RB duo in the league relative to what it actually cost. 2.05 Nico Collins anchors the receiving corps. Quarterback is a total question mark (Dart, Shough, Tagovailoa), but the RB efficiency alone carries this class. The QB room, meanwhile, carries nothing — Dart put up 0.80 in Week 2. Good luck, Sadiq."),
-    ("Hakka PUKA!!", "A", "1.03 Ja'Marr Chase is the safest true WR1 in the game, 2.10 Jayden Daniels (kept) is exceptional QB value, and 15.03 Puka Nacua (kept) is one of the single best keeper bargains in the league. Deep at every position with almost no holes."),
+    ("Hakka PUKA!! Jr Jr", "A", "1.03 Ja'Marr Chase is the safest true WR1 in the game, 2.10 Jayden Daniels (kept) is exceptional QB value, and 15.03 Puka Nacua (kept) is one of the single best keeper bargains in the league. Deep at every position with almost no holes."),
     ("Hells Angels", "A-", "1.04 Jaxon Smith-Njigba plus a kept RB1/RB2 in Josh Jacobs and James Cook III gives this team a high floor everywhere. 3.04 Trey McBride and 5.04 Bo Nix round out a quietly complete, well-balanced build."),
     ("Sahara and Sahil", "A-", "1.05 Josh Allen is the safest QB anchor available, 2.08 Kenneth Walker III and 3.05 Breece Hall give a strong RB1/RB2, and 13.05 Garrett Wilson (kept) is a ridiculous value at that cost. WR depth beyond Wilson is unproven, but the top of the roster is excellent."),
-    ("Chase the Baker Ladd!", "A-", "1.12 Chase Brown and 2.01 Omarion Hampton is a legitimate workhorse RB1/RB2 pairing, and 14.01 Justin Jefferson (kept via a 2023 trade) is the single best value asset in the entire league. No clear QB1 on the roster is the one real concern."),
+    ("Underachievers", "A-", "1.12 Chase Brown and 2.01 Omarion Hampton is a legitimate workhorse RB1/RB2 pairing, and 14.01 Justin Jefferson (kept via a 2023 trade) is the single best value asset in the entire league. No clear QB1 on the roster is the one real concern."),
     ("Christian My Calf Hurt", "B+", "1.10 Christian McCaffrey (kept) and 2.03 Jalen Hurts is a strong 1-2, with 3.10 Tee Higgins and 8.10 Rome Odunze (kept) stacking the receiving corps. Injury risk at the top (CMC) and thin proven RB depth behind him are the risks."),
     ("Philly Illy", "B+", "1.09 CeeDee Lamb, 2.04 A.J. Brown and 5.09 Emeka Egbuka (kept) is arguably the best three-deep WR room in the league, and 3.09 Justin Herbert anchors at QB. Running back was almost entirely ignored until Round 4, which is the clear weakness here."),
-    ("This hill I die on", "B+", "1.02 Lamar Jackson gives elite dual-threat QB upside, 2.11 Amon-Ra St. Brown (kept) is fantastic WR1 value, and 3.02 Derrick Henry still offers bell-cow volume. WR2/WR3 depth (Burden, Reed, Robinson) is unproven boom-or-bust."),
+    ("Reed A (little) Mor", "B+", "1.02 Lamar Jackson gives elite dual-threat QB upside, 2.11 Amon-Ra St. Brown (kept) is fantastic WR1 value, and 3.02 Derrick Henry still offers bell-cow volume. WR2/WR3 depth (Burden, Reed, Robinson) is unproven boom-or-bust."),
     ("Ali Khalid LLC", "B", "1.07 Bijan Robinson (kept) is elite value at that cost, and 2.06 Drake London gives a true WR1. But the RB room craters after Bijan (Jadarian Price, Tank Dell, Brian Robinson are all speculative), and the QB room (Goff, developmental rookie Fernando Mendoza) is thin."),
-    ("Hurts My Brain", "B-", "1.06 Joe Burrow is a bold, top-heavy QB anchor with real injury-history risk, and 12.06 Brock Bowers (kept) is elite TE value. Running back was a total afterthought until Round 7 — Tuten, Dowdle, Mason and the kept Cam Skattebo are unproven, and that's the roster's clear weak spot."),
+    ("Rico Suave", "B-", "1.06 Joe Burrow is a bold, top-heavy QB anchor with real injury-history risk, and 12.06 Brock Bowers (kept) is elite TE value. Running back was a total afterthought until Round 7 — Tuten, Dowdle, Mason and the kept Cam Skattebo are unproven, and that's the roster's clear weak spot."),
 ]
 
 def build_draft():
@@ -951,9 +953,9 @@ def build_keepers():
         <tr><td class="champ-cell">Jordan Love</td><td>{team_pill("Ali Khalid LLC")}</td><td>4</td><td>Drafted 2022, kept every year since</td></tr>
         <tr><td class="champ-cell">Christian McCaffrey</td><td>{team_pill("Christian My Calf Hurt")}</td><td>4</td><td>Drafted 2022, kept every year since</td></tr>
         <tr><td>De'Von Achane</td><td>{team_pill("Scypher")}</td><td>3</td><td>Joined 2023, kept every year since 2024</td></tr>
-        <tr><td>Justin Jefferson</td><td>{team_pill("Chase the Baker Ladd!")}</td><td>3</td><td>Traded in 2023, kept every year since 2024</td></tr>
+        <tr><td>Justin Jefferson</td><td>{team_pill("Underachievers")}</td><td>3</td><td>Traded in 2023, kept every year since 2024</td></tr>
         <tr><td>Garrett Wilson</td><td>{team_pill("Sahara and Sahil")}</td><td>3</td><td>Traded from Ilyas Oct 3, 2023, kept every year since 2024</td></tr>
-        <tr><td>Puka Nacua</td><td>{team_pill("Hakka PUKA!!")}</td><td>3</td><td>Joined 2023, kept every year since 2024</td></tr>
+        <tr><td>Puka Nacua</td><td>{team_pill("Hakka PUKA!! Jr Jr")}</td><td>3</td><td>Joined 2023, kept every year since 2024</td></tr>
       </tbody>
     </table>
   </div>
@@ -1287,28 +1289,28 @@ def build_recap():
     <h2>Week 1, 2026: Scypher Nearly Chokes a 249-Point Game</h2>
     <p class="article-meta">Week 1 Recap &middot; Published Sep 15, 2026</p>
     <p>The 2026 season opened with <strong>Scypher (Sadiq)</strong> dropping a league-best <strong>249.70</strong> &mdash; and somehow still needing every last decimal of it. <strong>Sahara and Sahil (Meisam)</strong> put up 238.88 and came within <strong>10.82</strong> of beating him, the closest matchup of the week. Only Sadiq could score the most points in the league and still make it a sweat. Enjoy it while it lasts, Sadiq &mdash; history says the collapse is coming.</p>
-    <p>The week's loudest statement belonged to <strong>Chase the Baker Ladd! (Turab)</strong>, who ran over <strong>Immaculate Concepcion (Hassnain)</strong> 164.94 to 96.68 &mdash; a 68.26-point beatdown that stood as the biggest blowout of the week by a wide margin. Elsewhere, <strong>Reed A (little) Mor (wajahat z)</strong> opened with a comfortable 206.56&ndash;162.22 win over Philly Illy (Ilyas), <strong>Mamba Mentality (kumail)</strong> beat Hakka PUKA!! Jr Jr (Parvez) 196.28&ndash;149.46, <strong>Ali Khalid LLC (wiseonekms)</strong> topped Rico Suave (Hussain) 191.62&ndash;152.16, and <strong>Hells Angels (omar)</strong> edged Christian My Calf Hurt (Sarosh) 180.98&ndash;165.82.</p>
-    <p>One week in, the six Week 1 winners &mdash; Scypher, Reed A (little) Mor, Mamba Mentality, Ali Khalid LLC, Hells Angels and Chase the Baker Ladd! &mdash; hold the six playoff spots if the season ended today. Way too early to mean anything, but somebody has to be on top heading into Week 2.</p>
+    <p>The week's loudest statement belonged to <strong>Underachievers (Turab)</strong>, who ran over <strong>Immaculate Concepcion (Hassnain)</strong> 164.94 to 96.68 &mdash; a 68.26-point beatdown that stood as the biggest blowout of the week by a wide margin. Elsewhere, <strong>Reed A (little) Mor (wajahat z)</strong> opened with a comfortable 206.56&ndash;162.22 win over Philly Illy (Ilyas), <strong>Mamba Mentality (kumail)</strong> beat Hakka PUKA!! Jr Jr (Parvez) 196.28&ndash;149.46, <strong>Ali Khalid LLC (wiseonekms)</strong> topped Rico Suave (Hussain) 191.62&ndash;152.16, and <strong>Hells Angels (omar)</strong> edged Christian My Calf Hurt (Sarosh) 180.98&ndash;165.82.</p>
+    <p>One week in, the six Week 1 winners &mdash; Scypher, Reed A (little) Mor, Mamba Mentality, Ali Khalid LLC, Hells Angels and Underachievers &mdash; hold the six playoff spots if the season ended today. Way too early to mean anything, but somebody has to be on top heading into Week 2.</p>
   </article>
 
   <article class="newsletter-article">
     <h2>Week 2, 2026: Hells Angels Take Over the Top Spot</h2>
     <p class="article-meta">Week 2 Recap &middot; Published Sep 23, 2026</p>
     <p>Week 2's loudest result came from <strong>Hells Angels (omar)</strong>, who put up <strong>201.80</strong> and flattened <strong>Philly Illy (Ilyas)</strong>'s 114.80 &mdash; an <strong>87.00-point</strong> blowout, the biggest margin of the season so far and enough to vault Hells Angels to No. 1 in the standings at 2-0 with 382.78 points for.</p>
-    <p>The week's top score belonged to <strong>Sahara and Sahil (Meisam)</strong>, whose <strong>203.34</strong> handled Hakka PUKA!! Jr Jr (Parvez) by 52.92. After a 238.88-point loss in Week 1, Sahara and Sahil now lead the league in points for (442.22) by 35 points. <strong>Chase the Baker Ladd! (Turab)</strong> stayed perfect by dragging <strong>Scypher (Sadiq)</strong> back to earth, 195.14 to 157.38, and <strong>Ali Khalid LLC (wiseonekms)</strong> moved to 2-0 in the closest game of the week, a 144.58&ndash;134.46 win over Reed A (little) Mor (wajahat z) decided by just <strong>10.12</strong>.</p>
+    <p>The week's top score belonged to <strong>Sahara and Sahil (Meisam)</strong>, whose <strong>203.34</strong> handled Hakka PUKA!! Jr Jr (Parvez) by 52.92. After a 238.88-point loss in Week 1, Sahara and Sahil now lead the league in points for (442.22) by 35 points. <strong>Underachievers (Turab)</strong> stayed perfect by dragging <strong>Scypher (Sadiq)</strong> back to earth, 195.14 to 157.38, and <strong>Ali Khalid LLC (wiseonekms)</strong> moved to 2-0 in the closest game of the week, a 144.58&ndash;134.46 win over Reed A (little) Mor (wajahat z) decided by just <strong>10.12</strong>.</p>
     <p>A word on Sadiq, since the collapse arrived right on schedule. One week after posting the league's top score, he dropped <strong>92.32 points</strong> to 157.38, lost by 37.76, and started <strong>Jaxson Dart</strong> in his superflex spot for a grand total of <strong>0.80 points</strong> &mdash; on a projection of 24.30. He is now 1-1, leads the league in points against (434.02), and has officially run out of people to blame except himself.</p>
     <p>Elsewhere, <strong>Rico Suave (Hussain)</strong> pulled the upset of the week, beating defending champion Mamba Mentality (kumail) 177.56&ndash;150.58, and <strong>Christian My Calf Hurt (Sarosh)</strong> got into the win column with a 184.06&ndash;156.54 victory over Immaculate Concepcion (Hassnain).</p>
-    <p>Two weeks in, three teams are unbeaten &mdash; Hells Angels, Chase the Baker Ladd! and Ali Khalid LLC &mdash; while Hakka PUKA!! Jr Jr, Philly Illy and Immaculate Concepcion are all still looking for their first win. Six teams sit in a 1-1 logjam in the middle, separated only by points for.</p>
+    <p>Two weeks in, three teams are unbeaten &mdash; Hells Angels, Underachievers and Ali Khalid LLC &mdash; while Hakka PUKA!! Jr Jr, Philly Illy and Immaculate Concepcion are all still looking for their first win. Six teams sit in a 1-1 logjam in the middle, separated only by points for.</p>
   </article>
 
   <article class="newsletter-article">
     <h2>Week 3, 2026: Mamba Wakes Up, Hells Angels Stand Alone</h2>
     <p class="article-meta">Week 3 Recap &middot; Published Sep 30, 2026</p>
     <p>The defending champ is back. <strong>Mamba Mentality (kumail)</strong> posted the week's top score, <strong>217.50</strong>, and turned it into the biggest blowout of Week 3 &mdash; a <strong>65.38-point</strong> win over <strong>Reed A (little) Mor (wajahat z)</strong>, 217.50 to 152.12. One week after losing to Rico Suave, kumail is 2-1 and fourth in the standings.</p>
-    <p><strong>Hells Angels (omar)</strong> are now the league's only unbeaten team, but they needed every point of their <strong>201.84</strong> to get past <strong>Ali Khalid LLC (wiseonekms)</strong>, who scored 196.14 &mdash; the fourth-highest total of the week &mdash; and lost by <strong>5.70</strong>. The closest game of the week went to <strong>Sahara and Sahil (Meisam)</strong>, who handed <strong>Chase the Baker Ladd! (Turab)</strong> his first loss, 162.02 to 156.64, a margin of just <strong>5.38</strong>. Meisam has now won two straight and leads the league in points for at 604.24.</p>
+    <p><strong>Hells Angels (omar)</strong> are now the league's only unbeaten team, but they needed every point of their <strong>201.84</strong> to get past <strong>Ali Khalid LLC (wiseonekms)</strong>, who scored 196.14 &mdash; the fourth-highest total of the week &mdash; and lost by <strong>5.70</strong>. The closest game of the week went to <strong>Sahara and Sahil (Meisam)</strong>, who handed <strong>Underachievers (Turab)</strong> his first loss, 162.02 to 156.64, a margin of just <strong>5.38</strong>. Meisam has now won two straight and leads the league in points for at 604.24.</p>
     <p>Elsewhere, <strong>Rico Suave (Hussain)</strong> won a shootout with Hakka PUKA!! Jr Jr (Parvez), 201.68&ndash;185.84 &mdash; Parvez's 185.84 was the fifth-best score of the week and he's still 0-3. <strong>Philly Illy (Ilyas)</strong> finally got in the win column, 144.36&ndash;121.70 over Immaculate Concepcion (Hassnain), whose 121.70 was the week's lowest score.</p>
     <p>Then there's <strong>Scypher (Sadiq)</strong>, who beat Christian My Calf Hurt (Sarosh) <strong>173.00&ndash;161.52</strong> and will absolutely be telling everyone about it. Let's look at how. Jahmyr Gibbs put up 51.40 and the Vikings defense added 29.00 &mdash; <strong>80.40 points from two players</strong>. The other eight starters combined for <strong>92.60</strong>. Sadiq started an IR-tagged <strong>De'Von Achane</strong> that Yahoo projected for <strong>0.00</strong> (he got 3.20), and Isaiah Likely (4.30 on a 12.15 projection) and Rashid Shaheed (3.40) did nothing. His 173.00 was only the sixth-best score of the week, he's third in the standings only because of the points tiebreak, and he's given up the second-most points in the league (595.54). A reminder: this is the man who went 14-0 last year and didn't win a ring. A 2-1 start is not a story.</p>
-    <p>Three weeks in, Hells Angels (3-0) are alone at the top, and there's a six-team logjam at 2-1 &mdash; Sahara and Sahil, Scypher, Mamba Mentality, Ali Khalid LLC, Rico Suave and Chase the Baker Ladd! all sit one game back, with Chase the Baker Ladd! the odd team out at seventh on points. Hakka PUKA!! Jr Jr and Immaculate Concepcion are the league's last two winless teams.</p>
+    <p>Three weeks in, Hells Angels (3-0) are alone at the top, and there's a six-team logjam at 2-1 &mdash; Sahara and Sahil, Scypher, Mamba Mentality, Ali Khalid LLC, Rico Suave and Underachievers all sit one game back, with Underachievers the odd team out at seventh on points. Hakka PUKA!! Jr Jr and Immaculate Concepcion are the league's last two winless teams.</p>
   </article>
 
   <article class="newsletter-article template-card">
@@ -1480,7 +1482,7 @@ def build_rivalries():
 
     # 2025-only grid (kept for reference), ordered by final 2025 standing
     h2h_25, mgrs_25 = compute_h2h_2025()
-    order_25 = sorted(mgrs_25, key=lambda m: STANDINGS_BY_TEAM_2025.get(D.CURRENT_TEAM_BY_MANAGER[m], [99])[0])
+    order_25 = sorted(mgrs_25, key=lambda m: STANDINGS_BY_MGR_2025.get(m, [99])[0])
 
     header_25 = "<th>Manager</th>" + "".join(f'<th>{m}</th>' for m in order_25)
     body_rows_25 = ""
