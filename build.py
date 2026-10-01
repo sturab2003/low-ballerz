@@ -1736,8 +1736,49 @@ def build_trades():
 # TRADE ANALYZER (trade-analyzer.html is hand-built; only its roster data and
 # team dropdowns are regenerated here from D.ROSTERS_2026 / D.TRADE_VALUES_2026)
 # ---------------------------------------------------------------
+# In-season value model. Each player's live value blends his PRESEASON value
+# (D.TRADE_VALUES_2026) with his actual 2026 production (D.PLAYER_STATS_2026):
+#   1. Points per game over replacement: PPG minus the PPG of the Nth-best player at
+#      his position (min 2 games), N = REPLACEMENT_RANK below -- roughly the last
+#      starter league-wide in this 12-team superflex lineup (QB, 2 RB, 3 WR, TE,
+#      W/T, Q/W/R/T, DEF). TE premium is already in the points (1.5 PPR for TEs).
+#   2. Scaled onto the preseason value scale (one factor, so the rostered pool's
+#      total value stays the same), with the keeper bonus re-applied:
+#      x1.15 for a Renewable keeper, x1.075 for a Last-Yr keeper.
+#   3. Blended by games played: production weight = GP / (GP + 1.5)
+#      (1 game 40%, 3 games 67%, 6 games 80%, 9 games 86%), the rest is preseason.
+#   Players with no games yet keep their preseason value. Floor of 0.5.
+REPLACEMENT_RANK = {"QB": 24, "RB": 30, "WR": 42, "TE": 14, "DEF": 14}
+
+def live_trade_values():
+    stats = D.PLAYER_STATS_2026
+    repl = {}
+    for pos, rank in REPLACEMENT_RANK.items():
+        ppg = sorted((pts / gp for p, gp, pts in stats.values() if p == pos and gp >= 2), reverse=True)
+        repl[pos] = ppg[min(rank, len(ppg)) - 1]
+    rostered = [name for players in D.ROSTERS_2026.values() for name, _pos, _st in players]
+    over = {}
+    for name in rostered:
+        if name in stats and stats[name][1] > 0:
+            pos, gp, pts = stats[name]
+            over[name] = max(0.0, pts / gp - repl[pos])
+    scale = sum(D.TRADE_VALUES_2026[n][0] for n in over) / (sum(over.values()) or 1)
+    values = {}
+    for name in rostered:
+        pre, keeper, final_year = D.TRADE_VALUES_2026[name]
+        if name in over:
+            gp = stats[name][1]
+            w = gp / (gp + 1.5)
+            bonus = (1.075 if final_year else 1.15) if keeper else 1.0
+            val = w * over[name] * scale * bonus + (1 - w) * pre
+        else:
+            val = pre
+        values[name] = max(0.5, round(val, 1))
+    return values
+
 def build_trade_analyzer():
     import json, re
+    live = live_trade_values()
     path = os.path.join(OUT, "trade-analyzer.html")
     with open(path, encoding="utf-8") as f:
         html = f.read()
@@ -1745,8 +1786,8 @@ def build_trade_analyzer():
     for team, players in D.ROSTERS_2026.items():
         rows = []
         for name, pos, _status in players:
-            value, keeper, final_year = D.TRADE_VALUES_2026[name]
-            rows.append({"name": name, "pos": pos, "value": value,
+            _pre, keeper, final_year = D.TRADE_VALUES_2026[name]
+            rows.append({"name": name, "pos": pos, "value": live[name],
                          "keeper": keeper, "keeperFinalYear": final_year})
         rows.sort(key=lambda r: -r["value"])
         trade_data[team] = rows
