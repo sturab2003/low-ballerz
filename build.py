@@ -316,7 +316,7 @@ def build_index():
     <a class="link-card" href="draft-central.html"><h3>Draft Central</h3><p>The completed 2026 draft board, final order and live results.</p></a>
     <a class="link-card" href="draft.html"><h3>Draft Recap</h3><p>Full 2026 draft board and grades, plus the 2025 draft archive.</p></a>
     <a class="link-card" href="keepers.html"><h3>Keepers</h3><p>2026 keepers by team, longest active streaks, and the new rules starting 2027.</p></a>
-    <a class="link-card" href="trades.html"><h3>Trade Newsletter</h3><p>Every trade from 2021-2025, graded with the benefit of hindsight.</p></a>
+    <a class="link-card" href="trades.html"><h3>Trade Newsletter</h3><p>Every trade since 2021, including this season&rsquo;s, graded with the benefit of hindsight.</p></a>
     <a class="link-card" href="trade-analyzer.html"><h3>Trade Analyzer</h3><p>Pick two teams and get an instant value verdict on any trade.</p></a>
     <a class="link-card" href="trash-talk.html"><h3>Trash Talk Board</h3><p>The receipts. Cold, hard, stat-backed disrespect.</p></a>
     <a class="link-card" href="futures.html"><h3>Predictions</h3><p>Lock in your picks for the 2026 season and see everyone else's live.</p></a>
@@ -1758,13 +1758,13 @@ def build_trades():
 
     body = f'''
 <section class="page-hero">
-  <p class="eyebrow">2021&ndash;2025 &middot; {total_trades} Trades &middot; {total_vetoed} Vetoed</p>
+  <p class="eyebrow">{years[-1]}&ndash;{years[0]} &middot; {total_trades} Trades &middot; {total_vetoed} Vetoed</p>
   <h1>Trade Newsletter</h1>
-  <p class="hero-sub">Every trade the league has made over the last five seasons (2021-2025), pulled directly from Yahoo's archived season pages. Grades and verdicts below are the site's own retrospective commentary, judged with the benefit of hindsight on how each deal actually played out. Vetoed trades are shown grayed out and ungraded.</p>
+  <p class="hero-sub">Every trade the league has made since 2021, pulled directly from Yahoo's league pages &mdash; including this season's deals as they happen. Grades and verdicts for past seasons are the site's own retrospective commentary, judged with the benefit of hindsight; current-season trades get an early read and stay ungraded until the season plays out. Vetoed trades are shown grayed out and ungraded.</p>
 </section>
 {sections}
 '''
-    return page("Trade Newsletter", "trades.html", body, "Every Low Ballerz fantasy football trade from 2021-2025, graded with hindsight.")
+    return page("Trade Newsletter", "trades.html", body, f"Every Low Ballerz fantasy football trade from {years[-1]}-{years[0]}, graded with hindsight.")
 
 # ---------------------------------------------------------------
 

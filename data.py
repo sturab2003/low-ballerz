@@ -1680,6 +1680,12 @@ TRADE_VALUES_2026 = {
 # team names differ year to year, unlike the current-season-only D.MANAGERS dict).
 # "m" (2021's "The Dynasty") is a departed former league member - shown as-is.
 TRADE_TEAM_MANAGERS = {
+    2026: {
+        "Ali Khalid LLC": "wiseonekms", "Christian My Calf Hurt": "Sarosh", "Hakka PUKA!! Jr Jr": "Parvez",
+        "Hells Angels": "omar", "Immaculate Concepcion": "Hassnain", "Mamba Mentality": "kumail",
+        "Philly Illy": "Ilyas", "Reed A (little) Mor": "wajahat z", "Rico Suave": "Hussain",
+        "Sahara and Sahil": "Meisam", "Scypher": "Sadiq", "Underachievers": "Turab",
+    },
     2021: {
         "Dalvin and the Chipmunks": "Hassnain", "FitzTragic Travesty": "Turab", "Footballerz": "Meisam",
         "Hells Angels": "omar", "KSolo": "wiseonekms", "Mamba Mentality": "kumail", "Philly Illy": "Ilyas",
@@ -1715,6 +1721,39 @@ TRADE_TEAM_MANAGERS = {
 # the site's own retrospective commentary based on how the trade actually played out
 # that season - not pulled from any external source.
 TRADES_LOG = {
+    # 2026 in-season trades, from Yahoo's league Transactions page (Trades filter).
+    # These are still being played out, so they carry no letter grade yet ("—");
+    # verdicts are an early read using only real Yahoo season stats. Re-grade
+    # with hindsight once the season is over.
+    2026: [
+        {
+            "date": "2026-10-01", "vetoed": False,
+            "sides": [
+                {"team": "Hakka PUKA!! Jr Jr", "gets": ["DJ Moore"]},
+                {"team": "Philly Illy", "gets": ["Jayden Daniels"]},
+            ],
+            "verdict": "Early read (through Week 4): Moore has 43.30 fantasy points in 4 games, but gave Parvez just 3.20 in his first week (13.57 projected) and carries a Q tag. Daniels has 44.40 points in only 2 games and is also listed Q &mdash; Philly started Tyson Bagent and Marcus Mariota at QB in Week 4. Too early to grade.",
+            "grade": "—",
+        },
+        {
+            "date": "2026-10-01", "vetoed": False,
+            "sides": [
+                {"team": "Sahara and Sahil", "gets": ["Stefon Diggs", "Rome Odunze"]},
+                {"team": "Christian My Calf Hurt", "gets": ["Chris Godwin Jr.", "Daniel Jones"]},
+            ],
+            "verdict": "Early read (season totals through Week 4): Diggs (53.00) and Odunze (38.30) have combined for 91.30 points; Godwin (32.70) and Jones (48.76) for 81.46. A two-for-two that gives Sarosh a QB and Meisam more WR depth. Too early to grade.",
+            "grade": "—",
+        },
+        {
+            "date": "2026-09-29", "vetoed": False,
+            "sides": [
+                {"team": "Sahara and Sahil", "gets": ["Carnell Tate"]},
+                {"team": "Scypher", "gets": ["Geno Smith"]},
+            ],
+            "verdict": "Early read (through Week 4): Sadiq finally addressed the QB room after Jaxson Dart's 0.80 in Week 2 &mdash; and Geno rewarded him with 13.76 in his Scypher debut, 4.59 under his 18.35 projection. Geno does have 84.18 points on the season; Tate has 49.80. Too early to grade, but not too early to laugh.",
+            "grade": "—",
+        },
+    ],
     2025: [
         {
             "date": "2025-11-19", "vetoed": False,
