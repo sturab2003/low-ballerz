@@ -489,23 +489,23 @@ def build_scores():
 # ---------------------------------------------------------------
 # POWER RANKINGS
 # ---------------------------------------------------------------
-# Post-Week-3 2026 power rankings. Order follows the live STANDINGS_2026 table
+# Post-Week-4 2026 power rankings. Order follows the live STANDINGS_2026 table
 # (record, then PF as tiebreak, same as Yahoo) and every number in the blurbs
 # is pulled straight from WEEKLY_SCORES_2026 / STANDINGS_2026 -- no projections
 # or invented stats. Re-derive this list each week as WEEKLY_SCORES_2026 grows.
 POWER_RANKINGS_2026 = [
-    ("Hells Angels", "omar", 1, "3-0 and the league's last unbeaten team. Survived Ali Khalid LLC 201.84–196.14 (+5.70) with Week 3's second-highest score. Three wins by a combined 107.86 points; 584.62 PF."),
-    ("Sahara and Sahil", "Meisam", 2, "2-1 and winners of two straight. Took the closest game of Week 3, 162.02–156.64 over Underachievers (+5.38), and still lead the league in points by a mile (604.24 PF)."),
-    ("Scypher", "Sadiq", 3, "2-1, and No. 3 only because Yahoo breaks ties with points. Beat Christian My Calf Hurt 173.00–161.52, but Jahmyr Gibbs (51.40) and the Vikings D (29.00) did 80.40 of it — the other eight starters managed 92.60. Started an IR-tagged De'Von Achane projected for 0.00 and got 3.20. Second-most points against (595.54). 14-0 last year, zero rings; 2-1 means nothing."),
-    ("Mamba Mentality", "kumail", 4, "2-1 and the defending champ is awake. Week 3's top score (217.50) and its biggest blowout, a 65.38-point win over Reed A (little) Mor. 564.36 PF."),
-    ("Ali Khalid LLC", "wiseonekms", 5, "2-1 after the cruelest loss of the week: 196.14, the fourth-highest score in Week 3, and still lost to Hells Angels by 5.70. 532.34 PF."),
-    ("Rico Suave", "Hussain", 6, "2-1 and winners of two straight. Posted 201.68 (third-highest of Week 3) to beat Hakka PUKA!! Jr Jr by 15.84. 531.40 PF."),
-    ("Underachievers", "Turab", 7, "2-1 after the first loss of the season, 162.02–156.64 to Sahara and Sahil — the week's closest margin (5.38). Still the league's lowest points against (416.08), but sits seventh on the PF tiebreak (516.72)."),
-    ("Christian My Calf Hurt", "Sarosh", 8, "1-2 after 161.52 came up 11.48 short against Scypher. 511.40 PF against 510.52 PA — about as even as it gets."),
-    ("Reed A (little) Mor", "wajahat z", 9, "1-2 and two straight losses. 152.12 ran straight into the week's top score and lost by 65.38, the biggest blowout of Week 3. 493.14 PF."),
-    ("Philly Illy", "Ilyas", 10, "1-2 and finally on the board: 144.36 was enough to beat Immaculate Concepcion by 22.66. 421.38 PF is second-lowest in the league."),
-    ("Hakka PUKA!! Jr Jr", "Parvez", 11, "0-3 and the unluckiest team in the league. 185.84 was the fifth-highest score of Week 3 and still lost to Rico Suave by 15.84. League-most 601.30 points against."),
-    ("Immaculate Concepcion", "Hassnain", 12, "0-3. 121.70 was Week 3's lowest score, a 22.66-point loss to Philly Illy. Lowest PF in the league at 374.92."),
+    ("Sahara and Sahil", "Meisam", 1, "3-1 and winners of three straight. Beat Christian My Calf Hurt 188.08–156.34 (+31.74) and lead the league in points for at 792.32, 31.24 clear of the next-best team."),
+    ("Scypher", "Sadiq", 2, "3-1 and a lucky No. 2. Beat 1-3 Philly Illy 181.00–163.86 (+17.14) — the second-lowest winning score of the week — despite Dontayvion Wicks putting up 4.80 on a 12.19 projection and the Vikings D dropping from 29.00 to 7.50. Nico Collins (34.80) and Zay Flowers (29.80) carried him. League-most points against (759.40) and a +1.68 point differential through four games. 14-0 last year, zero rings; the \"Champ\" era is still just a name."),
+    ("Mamba Mentality", "kumail", 3, "3-1 and winners of two straight. Posted 192.62 and handed Hells Angels their first loss, 29.90 points worth. Second-fewest points against in the league (641.86); 756.98 PF."),
+    ("Hells Angels", "omar", 4, "3-1 but no longer unbeaten. 162.72 lost to Mamba Mentality by 29.90, dropping them from the top spot to fourth. 747.34 PF."),
+    ("Rico Suave", "Hussain", 5, "3-1 and winners of three straight. Beat Reed A (little) Mor 177.30–155.16 (+22.14) — the lowest winning score of the week, but a win is a win. 708.70 PF is the lowest of the five 3-1 teams."),
+    ("Ali Khalid LLC", "wiseonekms", 6, "2-2 and two straight losses. 182.66 was the fifth-highest score of Week 4 and still lost to Immaculate Concepcion by 20.10. 715.00 PF is fifth in the league."),
+    ("Underachievers", "Turab", 7, "2-2 and two straight losses. 126.14 was Week 4's lowest score in an 86.20-point loss to Hakka PUKA!! Jr Jr. Still the league's fewest points against (628.42), but 642.86 PF is tenth."),
+    ("Hakka PUKA!! Jr Jr", "Parvez", 8, "1-3 and finally on the board. 212.34 was Week 4's top score, an 86.20-point win over Underachievers — the second-biggest margin of the season behind Week 2's 87.00. 698.06 PF is seventh; 727.44 PA is second-most."),
+    ("Christian My Calf Hurt", "Sarosh", 9, "1-3 and two straight losses. 156.34 fell 31.74 short of Sahara and Sahil. 667.74 PF against 698.60 PA."),
+    ("Reed A (little) Mor", "wajahat z", 10, "1-3 and three straight losses. 155.16 lost to Rico Suave by 22.14. 648.30 PF, and a league-low $16 of FAAB left."),
+    ("Philly Illy", "Ilyas", 11, "1-3. Got 89.60 from CeeDee Lamb (48.80) and Javonte Williams (40.80) and still lost to Scypher 181.00–163.86. 585.24 PF is second-lowest in the league."),
+    ("Immaculate Concepcion", "Hassnain", 12, "1-3 and off the winless list. 202.76 was Week 4's second-highest score, 81.06 better than last week's 121.70, and beat Ali Khalid LLC by 20.10. Still the lowest PF in the league at 577.68."),
 ]
 
 def build_power_rankings():
@@ -1064,6 +1064,33 @@ Philly Illy (Ilyas) 144.36 def Immaculate Concepcion (Hassnain) 121.70
 🤡 *THE SADIQ CORNER.* Sadiq "wins" 173.00 to 161.52. Gibbs (51.40) and the Vikings D (29.00) did 80 of it, the other 8 starters combined for 92.60. Started De'Von Achane with an IR tag, projected 0.00, got 3.20. Isaiah Likely 4.30. Shaheed 3.40. He's 3rd only because of the tiebreak and has the 2nd-most points against. Bro went 14-0 last year and still has no ring, a 2-1 start means nothing 🏆❌
 
 Week 4 loading. 👀""",
+    4: """🏈 *WEEK 4 RECAP — LOW BALLERZ*
+━━━━━━━━━━━━━━━━━━━━
+
+*THE SCORES*
+Hakka PUKA!! Jr Jr (Parvez) 212.34 def Underachievers (Turab) 126.14
+Immaculate Concepcion (Hassnain) 202.76 def Ali Khalid LLC (wiseonekms) 182.66
+Mamba Mentality (kumail) 192.62 def Hells Angels (omar) 162.72
+Sahara and Sahil (Meisam) 188.08 def Christian My Calf Hurt (Sarosh) 156.34
+Scypher (Sadiq) 181.00 def Philly Illy (Ilyas) 163.86
+Rico Suave (Hussain) 177.30 def Reed A (little) Mor (wajahat) 155.16
+
+*THE HEADLINES*
+
+🔥 *TOP DOG + MASSACRE.* Parvez drops 212.34, best of the week, and beats Turab by 86.20. First W of the year.
+
+😬 *CLOSEST.* Sadiq edges Ilyas by 17.14. Hardly a nail-biter.
+
+🎉 *FIRST WS.* Parvez and Hassnain both get on the board, no winless teams left. Omar takes his first L.
+
+*STANDINGS CHECK*
+3-1: Meisam, Sadiq, Kumail, Omar, Hussain (five-way tie)
+2-2: wiseonekms, Turab
+1-3: Parvez, Sarosh, Wajahat, Ilyas, Hassnain
+
+🤡 *THE SADIQ CORNER.* 181.00 was the 2nd-lowest winning score of the week. Ilyas got 89.60 from Lamb (48.80) and Javonte (40.80) and still lost, only because Collins (34.80) and Flowers (29.80) bailed Sadiq out. Dontayvion Wicks 4.80 on a 12.19 projection. Vikings D went from 29.00 to 7.50. Gibbs 25.20 vs 35.29 projected. Most points against in the league (759.40), +1.68 point differential through 4 games. 14-0 last year, zero rings, named his team "Champ" for nothing 🏆❌
+
+Week 5 loading. 👀""",
 }
 
 def _whatsapp_recap_html(raw):
@@ -1313,10 +1340,20 @@ def build_recap():
     <p>Three weeks in, Hells Angels (3-0) are alone at the top, and there's a six-team logjam at 2-1 &mdash; Sahara and Sahil, Scypher, Mamba Mentality, Ali Khalid LLC, Rico Suave and Underachievers all sit one game back, with Underachievers the odd team out at seventh on points. Hakka PUKA!! Jr Jr and Immaculate Concepcion are the league's last two winless teams.</p>
   </article>
 
+  <article class="newsletter-article">
+    <h2>Week 4, 2026: Parvez Erupts for 212, Hells Angels Lose Their Perfect Record</h2>
+    <p class="article-meta">Week 4 Recap &middot; Published Oct 7, 2026</p>
+    <p><strong>Hakka PUKA!! Jr Jr (Parvez)</strong> finally woke up. Parvez posted the week's top score, <strong>212.34</strong>, and buried <strong>Underachievers (Turab)</strong>, 212.34 to 126.14 &mdash; an <strong>86.20-point</strong> blowout, the second-biggest margin of the season behind Week 2's 87.00. Underachievers' 126.14 was the lowest score of the week, and Turab has now dropped two straight to fall to 2-2.</p>
+    <p>The other winless team joined the party too. <strong>Immaculate Concepcion (Hassnain)</strong> scored <strong>202.76</strong> &mdash; the second-highest total of the week and 81.06 better than last week's 121.70 &mdash; to beat <strong>Ali Khalid LLC (wiseonekms)</strong> by 20.10. Khasim's 182.66 was the fifth-best score of the week and still wasn't enough. With that, there are no winless teams left in the league.</p>
+    <p>At the top, <strong>Mamba Mentality (kumail)</strong> put up 192.62 and ended <strong>Hells Angels (omar)</strong>'s perfect start, winning by 29.90. <strong>Sahara and Sahil (Meisam)</strong> topped Christian My Calf Hurt (Sarosh) 188.08&ndash;156.34 for a third straight win and sit No. 1 on the points tiebreak with a league-best 792.32 PF, and <strong>Rico Suave (Hussain)</strong> also won his third in a row, 177.30&ndash;155.16 over Reed A (little) Mor (wajahat z).</p>
+    <p>Which brings us to <strong>Scypher (Sadiq)</strong>, who beat Philly Illy (Ilyas) 181.00&ndash;163.86 &mdash; the closest game of the week at <strong>17.14</strong> &mdash; and will no doubt be insufferable about it. Let's be clear about what happened: 181.00 was the second-lowest winning score of Week 4. Ilyas got <strong>89.60</strong> from CeeDee Lamb (48.80) and Javonte Williams (40.80) and still lost, because Sadiq's WR duo of Nico Collins (34.80) and Zay Flowers (29.80) bailed him out. Meanwhile <strong>Dontayvion Wicks</strong> sat in his lineup and produced <strong>4.80</strong> on a 12.19 projection, the Vikings defense followed last week's 29.00 with a <strong>7.50</strong>, and Jahmyr Gibbs (25.20) came up 10.09 short of his 35.29 projection. He has the most points against in the league (759.40), a point differential of <strong>+1.68</strong> across four games, and sits second in the standings. Remember: this is the man who went 14-0 last year and has zero rings, and renamed his team after a trophy he doesn't own. The collapse is coming; we're only waiting on the date.</p>
+    <p>Four weeks in, five teams sit at 3-1 &mdash; Sahara and Sahil, Scypher, Mamba Mentality, Hells Angels and Rico Suave &mdash; with Ali Khalid LLC and Underachievers at 2-2 and the other five all at 1-3. It's a tight, wide-open race for the six playoff spots.</p>
+  </article>
+
   <article class="newsletter-article template-card">
-    <h2>Week 4, 2026 &mdash; Coming Soon</h2>
-    <p class="article-meta">Template &middot; Ready to fill in once Week 4 wraps</p>
-    <p>This slot is reserved for the Week 4 recap. After Week 4 wraps, drop in: top scorer of the week, biggest upset, closest matchup, waiver wire winners, and one bold prediction for Week 5.</p>
+    <h2>Week 5, 2026 &mdash; Coming Soon</h2>
+    <p class="article-meta">Template &middot; Ready to fill in once Week 5 wraps</p>
+    <p>This slot is reserved for the Week 5 recap. After Week 5 wraps, drop in: top scorer of the week, biggest upset, closest matchup, waiver wire winners, and one bold prediction for Week 6.</p>
   </article>
 </section>
 {build_superlatives_section()}
