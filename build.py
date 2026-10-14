@@ -1116,7 +1116,12 @@ Ali Khalid LLC (wiseonekms) 189.42 def Scypher (Sadiq) 182.04
 2-3: Sarosh, Wajahat, Turab, Hassnain (four-way tie)
 1-4: Parvez, Ilyas
 
-🤡 *THE SADIQ CORNER.* Lost by 7.38 with Jameis Winston sitting on his bench for 36.24. Started Tyler Shough instead: −0.16 (2 INT, 96 yards). That's a 36.40-point swing on one decision. Also started Roman Wilson (Out, 0.00) and Fannin (1.90) while Croskey-Merritt (19.70) and Geno (14.48) watched from the bench. Point differential is now −5.70 and he has the most points against in the league (948.82). 14-0 last year, zero rings, and a QB room he can't operate 🏆❌
+🤡 *THE SADIQ CORNER.*
+Sadiq benched Jameis Winston (36.24) to start Tyler Shough (−0.16) and lost by 7.38. A blindfolded raccoon sets a better lineup.
+
+He also started Roman Wilson, who was listed OUT. Yahoo put a 0.00 next to his name like a warning label and Sadiq took it as a dare.
+
+14-0 last year, zero rings, and now he's losing to his own bench. Still calls himself Champ. Champ of what, Sadiq? Lineup malpractice? 🪑🤡
 
 Week 6 loading. 👀""",
 }
