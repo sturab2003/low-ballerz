@@ -1150,11 +1150,15 @@ Mamba Mentality (kumail) 138.40 def Scypher (Sadiq) 132.40
 2-4: Parvez, Sarosh, Wajahat, Turab, Hassnain, Ilyas (six-way tie)
 
 🤡 *THE SADIQ CORNER.*
-Sadiq loses by 6.00 with a season-low 132.40 while 67.28 points sat on his bench: Omar Cooper Jr. (28.30), Roschon Johnson (21.00) and Geno Smith (17.98). Meanwhile Brandin Cooks (2.30) and Dontayvion Wicks (4.40) started. Bench-coach of the year, wrong direction.
+Sadiq lost by 6.00 with a season-low 132.40. Meanwhile 67.28 points were sitting on his bench: Omar Cooper Jr. (28.30), Roschon Johnson (21.00) and Geno Smith (17.98). That's not a bench, that's a better team than the one he started.
 
-He also traded away Tyler Shough, who immediately dropped 35.46 for Turab. Sadiq got 14.02 out of Dak. Great trade, Champ.
+Who did start? Brandin Cooks (2.30) and Dontayvion Wicks (4.40). Together they scored less than Omar Cooper did by himself. Jameis Winston added 9.98 and two picks. This man is setting lineups like he's picking from a hat... and the hat is on fire.
 
-14-0 last year, zero rings, now 3-3 on a two-game skid. Champ of what, Sadiq? 🪑🤡
+Then the trade. Sadiq sent Tyler Shough to Turab, and Shough dropped 35.46 the next week. Sadiq got 14.02 out of Dak. He saw a 35-point QB and said "nah, give me the 14." Trader of the year, Champ.
+
+And Geno Smith, the QB he TRADED FOR, has now been benched two weeks running. He bought him a ticket and left him in the parking lot, twice.
+
+3-3, on a two-game skid, with the second-most points against in the league. 14-0 last year, zero rings. Named his team "Champ" before winning anything and has been losing to the name ever since. Champ of what, Sadiq? Champion of leaving points on the bench? 🪑🤡
 
 Week 7 loading. 👀""",
 }
