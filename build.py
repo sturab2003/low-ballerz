@@ -489,23 +489,23 @@ def build_scores():
 # ---------------------------------------------------------------
 # POWER RANKINGS
 # ---------------------------------------------------------------
-# Post-Week-6 2026 power rankings. Order follows the live STANDINGS_2026 table
+# Post-Week-7 2026 power rankings. Order follows the live STANDINGS_2026 table
 # (record, then PF as tiebreak, same as Yahoo) and every number in the blurbs
 # is pulled straight from WEEKLY_SCORES_2026 / STANDINGS_2026 -- no projections
 # or invented stats. Re-derive this list each week as WEEKLY_SCORES_2026 grows.
 POWER_RANKINGS_2026 = [
-    ("Sahara and Sahil", "Meisam", 1, "5-1 and winners of five straight. 190.80 was the week's top score, a 69.26-point flattening of Ali Khalid LLC, and Trevor Lawrence's 38.84 sat on his bench. 1210.38 PF leads the league by 110.60."),
-    ("Rico Suave", "Hussain", 2, "5-1 and winners of five straight, though barely: survived Immaculate Concepcion 150.68–148.68 (+2.00), the closest game of the week. 1069.10 PF is fourth in the league."),
-    ("Hells Angels", "omar", 3, "4-2 after snapping a two-game skid. 169.10 was the third-highest score of the week in a 35.52-point win over Reed A (little) Mor. 1099.78 PF is second in the league."),
-    ("Mamba Mentality", "kumail", 4, "4-2 and back in the win column. 138.40 was only the ninth-best score of the week but was enough to beat Scypher by 6.00. 974.76 PA is the second-fewest in the league."),
-    ("Scypher", "Sadiq", 5, "3-3 and two straight losses. Lost 138.40–132.40 to Mamba Mentality by 6.00 with a season-low 132.40 while Omar Cooper Jr. (28.30), Roschon Johnson (21.00) and Geno Smith (17.98) — 67.28 points — rode his bench and Brandin Cooks (2.30), Dontayvion Wicks (4.40) and Jameis Winston (9.98, 2 INT) started. Then there's the trade: Tyler Shough went for 35.46 on Turab's team, and Sadiq got 14.02 out of Dak Prescott. Point differential is −11.70 and his 1087.22 PA is second-most in the league. 14-0 last year, zero rings; the Champ keeps proving the name was premature."),
-    ("Ali Khalid LLC", "wiseonekms", 6, "3-3 and sliding. 121.54 was the lowest score of the week in a 69.26-point loss to Sahara and Sahil. 1025.96 PF against 1064.06 PA."),
-    ("Hakka PUKA!! Jr Jr", "Parvez", 7, "2-4 and up to No. 7 after beating Christian My Calf Hurt 152.58–146.76 (+5.82) for just the second win of the season. 1026.90 PF is sixth in the league."),
-    ("Christian My Calf Hurt", "Sarosh", 8, "2-4 and down a spot. 146.76 lost to Hakka PUKA!! Jr Jr by 5.82. 1016.78 PF against 1006.60 PA."),
-    ("Reed A (little) Mor", "wajahat z", 9, "2-4. 133.58 — the third-lowest score of the week — lost to Hells Angels by 35.52, even with 24.80 from Josh Allen in his first game after the Oct 14 trade. Still a league-low-tied $16 of FAAB left."),
-    ("Underachievers", "Turab", 10, "2-4 and four straight losses. 156.18 was the fourth-highest score of the week and still lost to Philly Illy by 23.62, even with 35.46 from Tyler Shough in his first game after the Oct 15 trade. 954.46 PF is fourth-lowest in the league."),
-    ("Immaculate Concepcion", "Hassnain", 11, "2-4 after a coin-flip loss. 148.68 fell 150.68 to Rico Suave by 2.00, the closest game of the week. 926.86 PF is second-lowest in the league."),
-    ("Philly Illy", "Ilyas", 12, "2-4 but finally some good news. 179.80 was the second-highest score of the week and snapped a two-game skid with a 23.62-point win over Underachievers, with 29.00 from Jayden Daniels. 890.56 PF is still the lowest in the league by 36.30, and 1094.50 PA is the most."),
+    ('Sahara and Sahil', 'Meisam', 1, '6-1 and winners of six straight. 169.64 was the fourth-highest score of the week in a 37.46-point win over Mamba Mentality. 1380.02 PF leads the league by 80.14.'),
+    ('Hells Angels', 'omar', 2, '5-2 and winners of two straight. 195.30 was the second-highest score of the week, a 40.20-point win over Hakka PUKA!! Jr Jr. 1295.08 PF is third in the league.'),
+    ('Rico Suave', 'Hussain', 3, '5-2, but the five-game winning streak is dead. 150.88 lost to Scypher by 73.48, the biggest margin of the week. 1239.58 PA is the third-most in the league.'),
+    ('Scypher', 'Sadiq', 4, "4-3 and finally woke up: 224.36 was the week's top score and a 73.48-point flattening of Rico Suave, with Geno Smith (33.48) and Dak Prescott (30.28) at QB. Naturally he still started Brandin Cooks (2.30) and Isaiah Likely (4.20) while Alvin Kamara (16.20) and Jonah Coleman (13.40) sat on his bench. 1299.88 PF is second in the league, which is a lot of points for a man with zero rings. Enjoy it, Champ &mdash; 14-0 last year, out in the semis to the #4 seed, and the inevitable choke is on its way."),
+    ('Ali Khalid LLC', 'wiseonekms', 5, '4-3 after bouncing back from the Week 6 blowout with a 162.46&ndash;139.98 win over Shough It! (+22.48). 1188.42 PF against 1204.04 PA.'),
+    ('Mamba Mentality', 'kumail', 6, '4-3 and back in the loss column. 132.18 was the second-lowest score of the week in a 37.46-point loss to Sahara and Sahil. 1144.40 PA is the second-fewest in the league.'),
+    ('Tucker up &#128139;', 'wajahat z', 7, '3-4 and up to No. 7 after a 70.42-point win over Laporta Potty. 184.14 was the third-highest score of the week, with 52.00 from Tony Pollard. Only $10 of FAAB left.'),
+    ('Philly Illy', 'Ilyas', 8, '3-4 and winners of two straight after edging Christian My Calf Hurt 154.56&ndash;150.22 (+4.34), the closest game of the week. 1045.12 PF is the second-lowest in the league, with $0 of FAAB left.'),
+    ('Hakka PUKA!! Jr Jr', 'Parvez', 9, '2-5 after a 195.30&ndash;155.10 loss to Hells Angels. 1275.64 PA is the most in the league.'),
+    ('Christian My Calf Hurt', 'Sarosh', 10, '2-5 after losing to Philly Illy by 4.34, the closest game of the week. Sent Travis Kelce to Philly for Justin Herbert and Chig Okonkwo on Oct 27.'),
+    ('Shough It!', 'Turab', 11, '2-5 and five straight losses. 139.98 lost to Ali Khalid LLC by 22.48, with 18.32 from Tyler Shough and 10.90 from Rome Odunze in his first game after the Oct 22 trade. 1094.44 PF.'),
+    ('Laporta Potty &#128169;', 'Hassnain', 12, '2-5. 113.72 was the lowest score of the week in a 70.42-point loss to Tucker up. 1040.58 PF is the lowest in the league.'),
 ]
 
 def build_power_rankings():
@@ -1161,6 +1161,42 @@ And Geno Smith, the QB he TRADED FOR, has now been benched two weeks running. He
 3-3, on a two-game skid, with the second-most points against in the league. 14-0 last year, zero rings. Named his team "Champ" before winning anything and has been losing to the name ever since. Champ of what, Sadiq? Champion of leaving points on the bench? 🪑🤡
 
 Week 7 loading. 👀""",
+    7: """🏈 *WEEK 7 RECAP — LOW BALLERZ*
+━━━━━━━━━━━━━━━━━━━━
+
+*THE SCORES*
+Scypher (Sadiq) 224.36 def Rico Suave (Hussain) 150.88
+Hells Angels (omar) 195.30 def Hakka PUKA!! Jr Jr (Parvez) 155.10
+Tucker up 💋 (wajahat) 184.14 def Laporta Potty 💩 (Hassnain) 113.72
+Sahara and Sahil (Meisam) 169.64 def Mamba Mentality (kumail) 132.18
+Ali Khalid LLC (wiseonekms) 162.46 def Shough It! (Turab) 139.98
+Philly Illy (Ilyas) 154.56 def Christian My Calf Hurt (Sarosh) 150.22
+
+*THE HEADLINES*
+
+🔥 *TOP DOG.* Sadiq drops 224.36, best of the week, and flattens Hussain by 73.48, the biggest blowout of the week.
+
+😬 *CLOSEST.* Ilyas edges Sarosh by 4.34 (154.56–150.22).
+
+🔁 *TRADE WATCH.* Three new trades: Rome Odunze to Turab for the Browns D (Meisam). Keenan Allen to Wajahat for TreVeyon Henderson (Turab). Travis Kelce to Ilyas for Justin Herbert + Chig Okonkwo (Sarosh).
+
+*STANDINGS CHECK*
+6-1: Meisam (six straight)
+5-2: Omar, Hussain
+4-3: Sadiq, Khasim, Kumail
+3-4: Wajahat, Ilyas
+2-5: Parvez, Sarosh, Turab, Hassnain (four-way tie)
+
+🤡 *THE SADIQ CORNER.*
+Sadiq finally hangs 224.36. Congrats. Enjoy it before the inevitable choke.
+
+And look who showed up: Geno Smith, the QB he benched two straight weeks, goes for 33.48 the second he's finally started. Dak adds 30.28. Turns out the QBs were never the problem, Champ. The lineup-setter was.
+
+Because even in a 73-point blowout he started Brandin Cooks (2.30) and Isaiah Likely (4.20) while Alvin Kamara (16.20) and Jonah Coleman (13.40) sat on the bench. Kamara alone outscored Cooks seven to one. Only Sadiq leaves points on the table in a game he wins by 73.
+
+4-3. 14-0 last year, out in the semis to the #4 seed, zero rings, and a team name that says "Champ" with nothing in the trophy case. Great week, Sadiq. See you at the choke. 🤡🏆
+
+Week 8 loading. 👀""",
 }
 
 def _whatsapp_recap_html(raw):
@@ -1441,10 +1477,20 @@ def build_recap():
     <p>Six weeks in, Meisam and Hussain lead at 5-1, Hells Angels and Mamba Mentality are 4-2, Scypher and Ali Khalid LLC are 3-3, and a six-way logjam sits at 2-4: Hakka PUKA!! Jr Jr, Christian My Calf Hurt, Reed A (little) Mor, Underachievers, Immaculate Concepcion and Philly Illy.</p>
   </article>
 
+  <article class="newsletter-article">
+    <h2>Week 7, 2026: Sadiq Hangs 224 on Hussain, Meisam Makes It Six Straight and Philly Edges Sarosh by 4.34</h2>
+    <p class="article-meta">Week 7 Recap &middot; Published Oct 28, 2026</p>
+    <p><strong>Sahara and Sahil (Meisam)</strong> beat <strong>Mamba Mentality (kumail)</strong> 169.64&ndash;132.18 (+37.46) for a sixth straight win, a 6-1 record and a league-best 1380.02 points for, 80.14 clear of the next-best team. Mamba's 132.18 was the second-lowest score of the week. <strong>Hells Angels (omar)</strong> posted the second-highest score of the week, <strong>195.30</strong>, and beat <strong>Hakka PUKA!! Jr Jr (Parvez)</strong> by 40.20 to move to 5-2 on two straight wins.</p>
+    <p><strong>Tucker up &#128139; (wajahat z)</strong>, the team formerly known as Reed A (little) Mor, scored 184.14, the third-highest of the week, and beat <strong>Laporta Potty &#128169; (Hassnain)</strong>, formerly Immaculate Concepcion, by 70.42, with 52.00 from Tony Pollard. Hassnain's 113.72 was the lowest score of the week and the second-lowest of the season. The closest game of the week belonged to <strong>Philly Illy (Ilyas)</strong>, who edged <strong>Christian My Calf Hurt (Sarosh)</strong> 154.56&ndash;150.22 (+4.34) for a second straight win and a 3-4 record. <strong>Ali Khalid LLC (wiseonekms)</strong> bounced back from the Week 6 blowout with a 162.46&ndash;139.98 win over <strong>Shough It! (Turab)</strong>, formerly Underachievers, who has now lost five straight and sits at 2-5.</p>
+    <p>Three trades went through since the last recap. On Oct 22, Rome Odunze went to Shough It! for the Browns DEF (Sahara and Sahil), and Keenan Allen went to Tucker up for TreVeyon Henderson (Shough It!). On Oct 27, Travis Kelce went to Philly Illy for Justin Herbert and Chig Okonkwo (Christian My Calf Hurt). Details on the <a href="trades.html">Trade Newsletter</a> page.</p>
+    <p>And then there's <strong>Scypher (Sadiq)</strong>, who posted <strong>224.36</strong> &mdash; the top score of the week, the fourth-highest of the season and his best since Week 1's 249.70 &mdash; and flattened <strong>Rico Suave (Hussain)</strong> by <strong>73.48</strong>, the biggest margin of Week 7 and the end of Hussain's five-game winning streak. Credit where it's due: <strong>Jahmyr Gibbs</strong> (34.80), <strong>Zay Flowers</strong> (33.70), <strong>Geno Smith</strong> (33.48) and <strong>Dak Prescott</strong> (30.28) did the heavy lifting. Yes, that's the same Geno Smith he benched for two straight weeks. Naturally, even in a 73-point blowout, Sadiq found a way to leave points on the table: he started <strong>Brandin Cooks</strong> (2.30) and <strong>Isaiah Likely</strong> (4.20) while <strong>Alvin Kamara</strong> (16.20) and <strong>Jonah Coleman</strong> (13.40) rode his bench &mdash; Kamara alone outscored Cooks seven to one. He's 4-3 now with a +61.78 point differential and the league's second-most points for (1299.88). Enjoy it, Champ. This is the man who went 14-0 last year, lost his semifinal to the #4 seed and has zero rings, and renamed his team after a trophy he doesn't own. A 224 in October is a participation ribbon; the choke is scheduled for January.</p>
+    <p>Seven weeks in, Meisam leads at 6-1, Hells Angels and Hussain are 5-2, Scypher, Ali Khalid LLC and Mamba Mentality share 4-3, Tucker up and Philly Illy are 3-4, and Hakka PUKA!! Jr Jr, Christian My Calf Hurt, Shough It! and Laporta Potty are a four-way tie at 2-5.</p>
+  </article>
+
   <article class="newsletter-article template-card">
-    <h2>Week 7, 2026 &mdash; Coming Soon</h2>
-    <p class="article-meta">Template &middot; Ready to fill in once Week 7 wraps</p>
-    <p>This slot is reserved for the Week 7 recap. After Week 7 wraps, drop in: top scorer of the week, biggest upset, closest matchup, waiver wire winners, and one bold prediction for Week 8.</p>
+    <h2>Week 8, 2026 &mdash; Coming Soon</h2>
+    <p class="article-meta">Template &middot; Ready to fill in once Week 8 wraps</p>
+    <p>This slot is reserved for the Week 8 recap. After Week 8 wraps, drop in: top scorer of the week, biggest upset, closest matchup, waiver wire winners, and one bold prediction for Week 9.</p>
   </article>
 </section>
 {build_superlatives_section()}
