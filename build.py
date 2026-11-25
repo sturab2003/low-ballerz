@@ -489,23 +489,23 @@ def build_scores():
 # ---------------------------------------------------------------
 # POWER RANKINGS
 # ---------------------------------------------------------------
-# Post-Week-10 2026 power rankings. Order follows the live STANDINGS_2026 table
+# Post-Week-11 2026 power rankings. Order follows the live STANDINGS_2026 table
 # (record, then PF as tiebreak, same as Yahoo) and every number in the blurbs
 # is pulled straight from WEEKLY_SCORES_2026 / STANDINGS_2026 -- no projections
 # or invented stats. Re-derive this list each week as WEEKLY_SCORES_2026 grows.
 POWER_RANKINGS_2026 = [
-    ('Sahara and Sahil', 'Meisam', 1, '8-2 and winners of two straight. 193.66 beat Hells Angels by 26.38, with 49.10 from Emmett Johnson and 40.78 from Trevor Lawrence. 1926.36 PF leads the league by 39.74.'),
-    ('Rico Suave', 'Hussain', 2, '8-2 and winners of three straight. 179.72 beat Christian My Calf Hurt by 14.84, the closest game of the week, with 52.66 from Joe Burrow and 36.20 from Cam Skattebo.'),
-    ('Scypher', 'Sadiq', 3, "7-3, four straight wins and the week's top score, 227.24 &mdash; still 0.02 short of the 227.26 Meisam posted in Week 5. Gibbs (63.20) and Dak Prescott (48.42) scored 111.62 of it. He started a Q-tagged Omar Cooper Jr., who finished with an empty stat line and 0.00 and was cut on Wednesday, started Geno Smith for 5.92 on a 20.71 projection, and left the Vikings D's 26.50 on the bench behind the Rams' 18.00. Two of his Week 10 starters, Cooper and Justice Hill, are already free agents. 14-0 last year and no ring: four straight in November is the warm-up act, not the show."),
-    ('Hells Angels', 'omar', 4, '6-4 and two straight losses. 167.28 lost to Sahara and Sahil by 26.38 despite 42.70 from James Cook III and 41.10 from Jaxon Smith-Njigba; Bryce Young scored 8.60. Still the full $100 of FAAB.'),
-    ('Mamba Mentality', 'kumail', 5, '6-4 and back in the win column. 185.26 beat Philly Illy by 70.00, with 52.42 from Patrick Mahomes and 46.50 from George Pickens. 1584.94 PA is the fewest in the league.'),
-    ('Hakka PUKA!! Jr Jr', 'Parvez', 6, "5-5 and winners of three straight. 216.88, the second-highest score of the week, beat Ali Khalid LLC by 71.46, the biggest margin of the week, with 49.66 from Brock Purdy, 48.10 from Ja'Marr Chase and 47.70 from Chuba Hubbard. Holds the sixth and final playoff spot by a game."),
-    ('Christian My Calf Hurt', 'Sarosh', 7, '4-6 after a 179.72&ndash;164.88 loss to Rico Suave (&minus;14.84), even with 65.80 from Christian McCaffrey, the best individual score of the week. 1587.00 PA is the second-fewest in the league.'),
-    ('Ali Khalid LLC', 'wiseonekms', 8, '4-6 and three straight losses. 145.42 lost to Hakka PUKA!! Jr Jr by 71.46, the biggest margin of the week, even with 32.92 from Jared Goff.'),
-    ('Philly Illy', 'Ilyas', 9, "4-6 after the lowest score of the week, 115.26, in a 70.00-point loss to Mamba Mentality. Jayden Daniels scored 32.26 and CeeDee Lamb's 20.20 was next-best. 1781.80 PA is the most in the league, with $0 of FAAB left."),
-    ('Tucker up &#128139;', 'wajahat z', 10, '3-7 and three straight losses. 176.94 lost to Shough It! by 31.26 even with 30.84 from Josh Allen and 28.40 from Tony Pollard, while Cam Ward (25.64) and Drew Lock (25.60) scored on the bench.'),
-    ('Shough It!', 'Turab', 11, '3-7 and the seven-game losing streak is over. 208.20, the third-highest score of the week, beat Tucker up by 31.26, with 33.30 from Chase Brown, 31.50 from Omarion Hampton and 25.12 from J.J. McCarthy.'),
-    ('Laporta Potty &#128169;', 'Hassnain', 12, '2-8 and five straight losses. 169.14 lost to Scypher by 58.10 even with 36.20 from Parker Washington and 32.40 from Deebo Samuel Sr. 1490.52 PF is the lowest in the league.'),
+    ('Sahara and Sahil', 'Meisam', 1, '9-2, three straight wins and the first team to clinch a playoff spot. 162.34 beat Laporta Potty by 5.98 with 38.80 from Emmett Johnson and 29.00 from Breece Hall. 1789.20 PA is the third-fewest in the league. Next up: Scypher, for first place.'),
+    ('Scypher', 'Sadiq', 2, "8-3, five straight wins, the week's top score (213.70) and now the league's most points for, 2100.32. Jonah Coleman (49.90), Dak Prescott (47.90) and Gibbs (39.30) did the work. Sadiq's contributions: after benching Courtland Sutton for 9.30 in Week 8 and 15.50 in Week 9, he finally started him, and Sutton gave him 0.00 before getting cut. He benched Geno Smith's 25.94, started a Vikings D that scored &minus;1.50, and traded his TE in the middle of Sunday for two players on bye. 14-0 last year and no ring: the streak is the warm-up act, the choke is the show."),
+    ('Rico Suave', 'Hussain', 3, '8-3 after a 180.30&ndash;138.50 loss to Philly Illy (&minus;41.80) ended a three-game win streak. Joe Burrow scored 27.90 and Tetairoa McMillan 19.10. Still a game clear of the two 7-4 teams behind him.'),
+    ('Hells Angels', 'omar', 4, '7-4 and back in the win column. 155.86 edged Shough It! by 2.54, the closest game of the week, with 28.20 from James Cook III and 20.96 from Bryce Young. Still the full $100 of FAAB.'),
+    ('Mamba Mentality', 'kumail', 5, '7-4 and winners of two straight. 182.76, the second-highest score of the week, beat Ali Khalid LLC by 49.32, the biggest margin of the week, with 38.40 from Ashton Jeanty and 32.96 from Patrick Mahomes. Picked up Harold Fannin Jr. from Scypher on Sunday.'),
+    ('Hakka PUKA!! Jr Jr', 'Parvez', 6, '5-6 after a 213.70&ndash;169.18 loss to Scypher ended a three-game win streak. Chuba Hubbard scored 42.50 and Brock Purdy 28.20. Still holds the sixth and final playoff spot on points, and his 1938.92 PA is the most in the league.'),
+    ('Christian My Calf Hurt', 'Sarosh', 7, '5-6 after a 119.90&ndash;108.66 win over Tucker up (+11.24), with 30.44 from Justin Herbert and 25.90 from Mike Evans. 1695.66 PA is the fewest in the league; tied with Parvez at 5-6 but 188.74 behind him on points.'),
+    ('Philly Illy', 'Ilyas', 8, '5-6 after 180.30, the third-highest score of the week, beat Rico Suave by 41.80, with 33.20 from CeeDee Lamb and 33.10 from Javonte Williams. Back in the playoff hunt with $0 of FAAB and a league-high 111 moves.'),
+    ('Ali Khalid LLC', 'wiseonekms', 9, '4-7 and four straight losses. 133.44 lost to Mamba Mentality by 49.32, the biggest margin of the week, even with 30.88 from Fernando Mendoza and 30.86 from Jared Goff. One game out of the last playoff spot.'),
+    ('Tucker up &#128139;', 'wajahat z', 10, '3-8 and four straight losses. 108.66 was the lowest score of the week and the second-lowest of the season, in an 11.24-point loss to Christian My Calf Hurt; Tony Pollard (24.50) and Josh Allen (16.16) led the way.'),
+    ('Shough It!', 'Turab', 11, "3-8 after the closest game of the week, a 155.86&ndash;153.32 loss to Hells Angels (&minus;2.54). Cam Ward scored 30.22 in his debut and Bucky Irving 28.00, while Baker Mayfield's 26.08 sat on the bench."),
+    ('Laporta Potty &#128169;', 'Hassnain', 12, '2-9 and six straight losses. 156.36 lost to Sahara and Sahil by 5.98 even with 32.46 from C.J. Stroud and 22.00 from Saquon Barkley. 1646.88 PF is the lowest in the league.'),
 ]
 
 def build_power_rankings():
@@ -1320,6 +1320,52 @@ Two of his Week 10 starters, Cooper and Justice Hill, are already free agents. O
 Four straight wins. Last year it was fourteen straight, then a semifinal exit to the #4 seed. Sadiq doesn't build streaks, he builds suspense. 🤡🏆
 
 Week 11 loading. 👀""",
+    11: """🏈 *WEEK 11 RECAP — LOW BALLERZ*
+━━━━━━━━━━━━━━━━━━━━
+
+*THE SCORES*
+Scypher (Sadiq) 213.70 def Hakka PUKA!! Jr Jr (Parvez) 169.18
+Mamba Mentality (kumail) 182.76 def Ali Khalid LLC (Khasim) 133.44
+Philly Illy (Ilyas) 180.30 def Rico Suave (Hussain) 138.50
+Sahara and Sahil (Meisam) 162.34 def Laporta Potty 💩 (Hassnain) 156.36
+Hells Angels (omar) 155.86 def Shough It! (Turab) 153.32
+Christian My Calf Hurt (Sarosh) 119.90 def Tucker up 💋 (wajahat) 108.66
+
+*THE HEADLINES*
+
+🔥 *TOP DOG.* Sadiq drops 213.70, best of the week (the Sadiq Corner has the receipts). Kumail was next with 182.76.
+
+😬 *CLOSEST.* Omar over Turab by 2.54 (155.86–153.32). Cam Ward put up 30.22 in his debut while Baker Mayfield's 26.08 watched from Turab's bench.
+
+💀 *BLOWOUT.* Kumail beats Khasim by 49.32 behind Jeanty (38.40) and Mahomes (32.96). Khasim has lost four straight.
+
+🥶 *ICE COLD.* Wajahat's 108.66 was the lowest score of the week and the second-lowest of the season. Hassnain has lost six straight.
+
+✅ *CLINCHED.* Meisam (9-2) is the first team locked into the playoffs.
+
+🔁 *TRADE WATCH.* Two new trades: Cam Ward to Turab for Caleb Douglas (Wajahat), and Harold Fannin Jr. to Kumail for Michael Penix Jr. + Blake Corum (Sadiq).
+
+*STANDINGS CHECK*
+9-2: Meisam (clinched)
+8-3: Sadiq, Hussain
+7-4: Omar, Kumail
+5-6: Parvez, Sarosh, Ilyas (three-way tie, Parvez holds the 6th spot on points)
+4-7: Khasim
+3-8: Wajahat, Turab
+2-9: Hassnain (six straight losses)
+
+🤡 *THE SADIQ CORNER.*
+Sadiq drops 213.70, top score of the week, five straight wins. Congrats. Enjoy it before the inevitable choke.
+
+The Courtland Sutton Bench Watch is officially over. After Sutton scored 9.30 and 15.50 on his bench, Sadiq FINALLY started him. Sutton: 0 catches, 0.00 points. The Broncos scored 38 and Sadiq's own Jonah Coleman ran in three TDs in that same game. "Ohhhhh PAINTER!!!" Weeks late and still wrong. Sutton is now a free agent.
+
+Meanwhile Geno threw 3 TDs for 25.94... on the bench. Vikings D: −1.50. Isaiah Likely: 5.00 on a 17.06 projection.
+
+Then, in the middle of Sunday, he traded his TE for two guys who were on bye, one of them a third QB. Coleman (49.90), Dak (47.90) and Gibbs (39.30) did the winning. Sadiq did the paperwork.
+
+"It was new when he bought it, but when he got in it, it was used." Same with "Champ": champ when he named it, used the second the playoffs start. 14-0 last year, semifinal loss to the #4 seed, no ring. Next week it's Sadiq vs Meisam for first place. See you at the choke. 🤡🏆
+
+Week 12 loading. 👀""",
 }
 
 def _whatsapp_recap_html(raw):
@@ -1642,10 +1688,20 @@ def build_recap():
     <p>Ten weeks in, Meisam and Hussain lead at 8-2, Sadiq is alone at 7-3, Omar and kumail are 6-4, Parvez holds the last playoff spot at 5-5, Christian My Calf Hurt, Ali Khalid LLC and Philly Illy are 4-6, Tucker up and Shough It! are 3-7, and Laporta Potty is 2-8.</p>
   </article>
 
+  <article class="newsletter-article">
+    <h2>Week 11, 2026: Sadiq Tops the Week Again, Finally Starts Sutton and Gets 0.00, and Turab Loses by 2.54</h2>
+    <p class="article-meta">Week 11 Recap &middot; Published Nov 25, 2026</p>
+    <p><strong>Mamba Mentality (kumail)</strong> handed out the biggest beating of the week, 182.76&ndash;133.44 over <strong>Ali Khalid LLC (wiseonekms)</strong> &mdash; a <strong>49.32-point</strong> margin, well short of Week 5's 101.74 &mdash; behind Ashton Jeanty (38.40) and Patrick Mahomes (32.96). That's two straight wins and a 7-4 record for kumail. Khasim got 30.88 from Fernando Mendoza and 30.86 from Jared Goff and still lost his fourth straight to fall to 4-7, a game out of the last playoff spot. <strong>Philly Illy (Ilyas)</strong> scored 180.30, the third-highest total of the week, and beat <strong>Rico Suave (Hussain)</strong> by 41.80 behind CeeDee Lamb (33.20) and Javonte Williams (33.10), ending Hussain's three-game winning streak.</p>
+    <p>At the top, <strong>Sahara and Sahil (Meisam)</strong> survived <strong>Laporta Potty &#128169; (Hassnain)</strong> 162.34&ndash;156.36 (+5.98) with 38.80 from Emmett Johnson and 29.00 from Breece Hall. That's three straight wins, a 9-2 record and the league's first clinched playoff spot. Hassnain got 32.46 from C.J. Stroud and has now lost six straight. The closest game of the week went to <strong>Hells Angels (omar)</strong>, who edged <strong>Shough It! (Turab)</strong> 155.86&ndash;153.32 (+2.54) behind James Cook III (28.20). Cam Ward scored 30.22 in his Shough It! debut and Bucky Irving added 28.00, but Baker Mayfield's 26.08 sat on Turab's bench in a 2.54-point loss. <strong>Christian My Calf Hurt (Sarosh)</strong> beat <strong>Tucker up &#128139; (wajahat z)</strong> 119.90&ndash;108.66 (+11.24) with 30.44 from Justin Herbert; wajahat's 108.66 was the lowest score of the week and the second-lowest of the season, and he's lost four straight.</p>
+    <p>Two trades went through this week. On Nov 19, Cam Ward went to Shough It! for Caleb Douglas (Tucker up); Ward scored 30.22 in his debut while Douglas put up 5.00 on wajahat's bench. On Nov 23, in the middle of Sunday's games, Sadiq sent Harold Fannin Jr. to Mamba Mentality for Michael Penix Jr. and Blake Corum &mdash; all three were on bye. Details on the <a href="trades.html">Trade Newsletter</a> page.</p>
+    <p>And then there's <strong>Scypher (Sadiq)</strong>, who posted the week's top score, <strong>213.70</strong> (the ninth-highest of the season), beat <strong>Hakka PUKA!! Jr Jr (Parvez)</strong> by 44.52 to end Parvez's three-game streak, and now has five straight wins and the league's most points for (2100.32), 11.62 ahead of Meisam. Credit where it's due: <strong>Jonah Coleman</strong> ran for 3 TDs and <strong>49.90</strong>, <strong>Dak Prescott</strong> threw 4 TDs for <strong>47.90</strong> and <strong>Jahmyr Gibbs</strong> added <strong>39.30</strong> &mdash; 137.10 from three players. Now the part Sadiq would like to skip. After weeks of the Courtland Sutton Bench Watch (9.30 on his bench in Week 8, 15.50 in Week 9), he finally put <strong>Sutton</strong> in the starting lineup. Sutton didn't catch a ball and scored <strong>0.00</strong> on a 9.16 projection, in a game the Broncos won 38&ndash;24 and in which Sadiq's own Jonah Coleman scored three touchdowns. Sutton is now a free agent. Sadiq also benched <strong>Geno Smith</strong>, who threw 3 TDs for <strong>25.94</strong> on the bench, started a Vikings D that went for <strong>&minus;1.50</strong>, got 5.00 out of Isaiah Likely on a 17.06 projection, and then, mid-Sunday, traded his TE for two players on bye, one of them a third quarterback. He's 8-3 and second in the standings, and next week he plays Meisam for first place. Enjoy it, Champ. This is the man who went 14-0 last year, lost his semifinal to the #4 seed and won nothing, and renamed his team &quot;Champ&quot; anyway. A five-game streak is cute; he had a fourteen-game one last year.</p>
+    <p>Eleven weeks in, Meisam leads at 9-2 and has clinched a playoff spot, Sadiq and Hussain are 8-3, Omar and kumail are 7-4, Parvez holds the sixth and final playoff spot at 5-6 on points ahead of Christian My Calf Hurt and Philly Illy, Ali Khalid LLC is 4-7, Tucker up and Shough It! are 3-8, and Laporta Potty is 2-9. Week 12 brings a first-place showdown: Scypher vs Sahara and Sahil.</p>
+  </article>
+
   <article class="newsletter-article template-card">
-    <h2>Week 11, 2026 &mdash; Coming Soon</h2>
-    <p class="article-meta">Template &middot; Ready to fill in once Week 11 wraps</p>
-    <p>This slot is reserved for the Week 11 recap. After Week 11 wraps, drop in: top scorer of the week, biggest upset, closest matchup, waiver wire winners, and one bold prediction for Week 12.</p>
+    <h2>Week 12, 2026 &mdash; Coming Soon</h2>
+    <p class="article-meta">Template &middot; Ready to fill in once Week 12 wraps</p>
+    <p>This slot is reserved for the Week 12 recap. After Week 12 wraps, drop in: top scorer of the week, biggest upset, closest matchup, waiver wire winners, and one bold prediction for Week 13.</p>
   </article>
 </section>
 {build_superlatives_section()}
