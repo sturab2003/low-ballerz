@@ -1355,15 +1355,21 @@ Christian My Calf Hurt (Sarosh) 119.90 def Tucker up 💋 (wajahat) 108.66
 2-9: Hassnain (six straight losses)
 
 🤡 *THE SADIQ CORNER.*
-Sadiq drops 213.70, top score of the week, five straight wins. Congrats. Enjoy it before the inevitable choke.
+Sadiq drops 213.70, top score of the week, five straight wins. He'd like you to stop reading here. We won't.
 
-The Courtland Sutton Bench Watch is officially over. After Sutton scored 9.30 and 15.50 on his bench, Sadiq FINALLY started him. Sutton: 0 catches, 0.00 points. The Broncos scored 38 and Sadiq's own Jonah Coleman ran in three TDs in that same game. "Ohhhhh PAINTER!!!" Weeks late and still wrong. Sutton is now a free agent.
+📺 *The Sutton Saga, series finale.* Week 8: Sutton scores 9.30 on Sadiq's bench. Week 9: 15.50 on the bench. Week 11: Sadiq finally starts him. Sutton: 0 catches, 0.00 points. Same game, same Broncos offense, Sadiq's own Jonah Coleman runs in THREE touchdowns. Sadiq, live: "Ohhhhh PAINTER!!!" Two benchings late, wrong painter. Sutton has since been released, the first smart decision anyone in this story has made.
 
-Meanwhile Geno threw 3 TDs for 25.94... on the bench. Vikings D: −1.50. Isaiah Likely: 5.00 on a 17.06 projection.
+🧑‍🏫 *Lineup 101.* Geno threw 3 TDs for 25.94... on the bench. The Vikings D he started scored −1.50. Isaiah Likely gave him 5.00 on a 17.06 projection. "Dude, it's not like the SCIENCE OF THE ROCKETS!?" Correct, Sadiq. For you it's harder.
 
-Then, in the middle of Sunday, he traded his TE for two guys who were on bye, one of them a third QB. Coleman (49.90), Dak (47.90) and Gibbs (39.30) did the winning. Sadiq did the paperwork.
+📞 *The trade desk.* Sunday afternoon, games already going, he trades his TE for Michael Penix Jr. and Blake Corum. Both on bye.
+"Yo sup dude, I made a trade."
+"Who'd you get for this week?"
+"Oh, they didn't have a game."
+Penix is now his THIRD QB. Ask him how many QBs he has and he'll say "No stupid, two including me." He has three. He isn't one of them.
 
-"It was new when he bought it, but when he got in it, it was used." Same with "Champ": champ when he named it, used the second the playoffs start. 14-0 last year, semifinal loss to the #4 seed, no ring. Next week it's Sadiq vs Meisam for first place. See you at the choke. 🤡🏆
+🏎️ *"Champ," explained.* "It was new when he bought it, but when he got in it, it was used." Same with the team name: Champ when he typed it in, used the second the playoffs started. 14-0 last year, semifinal loss to the #4 seed, ring count still zero.
+
+🗓️ *Next week:* Sadiq vs Meisam for first place. "Because I'll DOMINATE IT!!" Sure. And the choke? "That's pretty late January." 🤡🏆
 
 Week 12 loading. 👀""",
 }
